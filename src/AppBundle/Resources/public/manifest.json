@@ -1,0 +1,6 @@
+{
+  "path": {
+    "source": "src/AppBundle/Resources/public",
+    "dist": "web/assets"
+  }
+}
