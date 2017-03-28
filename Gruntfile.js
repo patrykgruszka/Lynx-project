@@ -2,7 +2,7 @@
 module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        manifest: grunt.file.readJSON('src/AppBundle/Resources/public/manifest.json'),
+        manifest: grunt.file.readJSON('manifest.json'),
         jshint: {
             scripts: [
                 '<%= manifest.path.source %>/scripts/**/*.js'

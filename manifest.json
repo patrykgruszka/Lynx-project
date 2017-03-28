@@ -1,0 +1,6 @@
+{
+  "path": {
+    "source": "app/Resources",
+    "dist": "web/assets"
+  }
+}
