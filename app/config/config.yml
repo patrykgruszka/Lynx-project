@@ -149,10 +149,10 @@ swiftmailer:
     password: '%mailer_password%'
     spool: { type: memory }
     
-fos_user:
-    db_driver: orm
-    firewall_name: main
-    user_class: test\ApiBundle\Entity\User
+#fos_user:
+#    db_driver: orm
+#    firewall_name: main
+#    user_class: test\ApiBundle\Entity\User
 
 fos_oauth_server:
     db_driver: orm
@@ -163,7 +163,7 @@ fos_oauth_server:
     service:
         options:
             supported_scopes: read
-            
+
 fos_rest:
     param_fetcher_listener: true
     body_listener: true
