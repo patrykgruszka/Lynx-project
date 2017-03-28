@@ -20,7 +20,8 @@ Jedną z opcji jest zainstalowanie composera globalnie w systemie operacyjnym, w
 Środowisko programistyczne node.js należy pobrać ze [strony internetowej](https://nodejs.org/) i zainstalować w systemie operacyjnym.
 
 ### Grunt ###
-Grunt jest instalowany globalnie za pomocą wiersza poleceń. Więcej informacji na stronie internetowej [Grunta](http://gruntjs.com/)
+Grunt jest instalowany globalnie za pomocą wiersza poleceń. Więcej informacji na stronie internetowej [Grunta](http://gruntjs.com/) 
+
 `npm install -g grunt-cli`
 
 ## Instalacja projektu ##
@@ -32,7 +33,7 @@ Konfiguracja vhostów serwera XAMPP znajduje się w katalogu serwera, np.
 Do pliku należy dodać wpis vhost dla przykładowej domeny lynx.dev znajdującej się w katalogu C:/development/polsl/lynx
 ```
 <VirtualHost *:80>
-    DocumentRoot "C:/development/polsl/lynx/web"
+    DocumentRoot "C:/development/polsl/lynx/web/app_dev.php"
     ServerName lynx.dev
     ErrorLog "logs/lynx.dev-error.log"
     CustomLog "logs/lynx.dev-access.log" common
@@ -46,6 +47,10 @@ Do pliku należy dodać wpis vhost dla przykładowej domeny lynx.dev znajdujące
     </Directory>
 </VirtualHost>
 ```
+
+Przy wykorzystaniu vhosta należy pamietać o przekierowaniu domeny na adres lokalny w pliku hosts. W systemach Windows:
+` C:\Windows\System32\drivers\etc\hosts`
+
 
 ### Utworzenie bazy danych ###
 Należy utworzyć bazę danych dla projektu lynx. Dla serwera XAMPP jest dostępny panel phpMyAdmin.
