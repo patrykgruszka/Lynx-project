@@ -21,10 +21,13 @@ class AppKernel extends Kernel
             new FOS\OAuthServerBundle\FOSOAuthServerBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
-            new AppBundle\AppBundle(),
+            new App\BootBundle\AppBootBundle(),
+            new App\ManagerBundle\AppManagerBundle(),
+            new App\UserBundle\AppUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
+            $bundles[] = new Dizda\CloudBackupBundle\DizdaCloudBackupBundle();
             $bundles[] = new Symfony\Bundle\DebugBundle\DebugBundle();
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();

@@ -2,6 +2,9 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
+    - { resource: "@AppBootBundle/Resources/config/services.yml" }
+    - { resource: "@AppManagerBundle/Resources/config/services.yml" }
+    - { resource: "@AppUserBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -152,14 +155,14 @@ swiftmailer:
 fos_user:
     db_driver: orm
     firewall_name: main
-    user_class: test\ApiBundle\Entity\User
+    user_class: App\UserBundle\Entity\User
 
 fos_oauth_server:
     db_driver: orm
-    client_class:        test\ApiBundle\Entity\Client
-    access_token_class:  test\ApiBundle\Entity\AccessToken
-    refresh_token_class: test\ApiBundle\Entity\RefreshToken
-    auth_code_class:     test\ApiBundle\Entity\AuthCode
+    client_class:        App\BootBundle\Entity\Client
+    access_token_class:  App\BootBundle\Entity\AccessToken
+    refresh_token_class: App\BootBundle\Entity\RefreshToken
+    auth_code_class:     App\BootBundle\Entity\AuthCode
     service:
         options:
             supported_scopes: read
@@ -180,3 +183,11 @@ fos_rest:
             'Doctrine\ORM\OptimisticLockException': HTTP_CONFLICT
         messages:
             'Symfony\Component\Routing\Exception\ResourceNotFoundException': true
+fos_oauth_server:
+    db_driver: orm       # Drivers available: orm, mongodb, or propel
+    client_class:        Api\BootBundle\Entity\Client
+    access_token_class:  Api\BootBundle\Entity\AccessToken
+    refresh_token_class: Api\BootBundle\Entity\RefreshToken
+    auth_code_class:     Api\BootBundle\Entity\AuthCode
+    service:
+        user_provider: fos_user.user_provider.username

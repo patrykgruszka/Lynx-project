@@ -1,3 +1,20 @@
-app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
+app_user:
+    resource: "@AppUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app_manager:
+    resource: "@AppManagerBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app_boot:
+    resource: "@AppBootBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+fos_oauth_server_token:
+    resource: "@FOSOAuthServerBundle/Resources/config/routing/token.xml"
+
+fos_oauth_server_authorize:
+    resource: "@FOSOAuthServerBundle/Resources/config/routing/authorize.xml"

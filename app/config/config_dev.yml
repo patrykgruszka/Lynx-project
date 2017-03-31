@@ -32,3 +32,16 @@ monolog:
 
 #swiftmailer:
 #    delivery_addresses: ['me@example.com']
+
+dizda_cloud_backup:
+    output_file_prefix: lynx-project
+    timeout: 300
+    restore: false
+    processor:
+        type: tar
+        options:
+            compression_ratio: 9
+    folders: [ backup/database ]
+    
+    databases:
+        mysql:
