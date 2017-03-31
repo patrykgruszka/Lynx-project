@@ -166,7 +166,7 @@ fos_oauth_server:
     service:
         options:
             supported_scopes: read
-            
+
 fos_rest:
     param_fetcher_listener: true
     body_listener: true
