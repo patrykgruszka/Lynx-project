@@ -1,32 +1,32 @@
 lynx_task:
     resource: "@LynxTaskBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /task
 
 lynx_project:
     resource: "@LynxProjectBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /project
 
 lynx_taskboard:
     resource: "@LynxTaskboardBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /taskboard
 
 lynx_userpanel:
     resource: "@LynxUserpanelBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /userpanel
 
 app_user:
     resource: "@AppUserBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /user
 
 app_manager:
     resource: "@AppManagerBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /manager
 
 app_boot:
     resource: "@AppBootBundle/Controller/"
