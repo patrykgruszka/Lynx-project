@@ -1,0 +1,4 @@
+services:
+#    lynx_task.example:
+#        class: Lynx\TaskBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
