@@ -1,3 +1,23 @@
+lynx_task:
+    resource: "@LynxTaskBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+lynx_project:
+    resource: "@LynxProjectBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+lynx_taskboard:
+    resource: "@LynxTaskboardBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+lynx_userpanel:
+    resource: "@LynxUserpanelBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 app_user:
     resource: "@AppUserBundle/Controller/"
     type:     annotation

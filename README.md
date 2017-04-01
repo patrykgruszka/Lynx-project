@@ -30,15 +30,32 @@ Grunt jest instalowany globalnie za pomocą wiersza poleceń. Więcej informacji
 Konfiguracja vhostów serwera XAMPP znajduje się w katalogu serwera, np. 
 `C:\xampp\apache\conf\extra\httpd-vhosts.conf`
 
-Do pliku należy dodać wpis vhost dla przykładowej domeny lynx.dev znajdującej się w katalogu C:/development/polsl/lynx
+Do pliku należy dodać wpis vhost dla przykładowej domeny lynx.dev oraz lynx.prod dla katalogu w którym znajduje się projekt
 ```
+
 <VirtualHost *:80>
-    DocumentRoot "C:/development/polsl/lynx/web/app_dev.php"
+    DocumentRoot "SCIEZKA/DO/PROJEKTU/web/app_dev.php"
     ServerName lynx.dev
     ErrorLog "logs/lynx.dev-error.log"
     CustomLog "logs/lynx.dev-access.log" common
-    
-    <Directory "C:/development/polsl/lynx">
+    DirectoryIndex "app_dev.php"
+    <Directory "SCIEZKA/DO/PROJEKTU/lynx-project">
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+
+        Require all granted
+    </Directory>
+</VirtualHost>
+
+
+<VirtualHost *:80>
+    DocumentRoot "SCIEZKA/DO/PROJEKTU/lynx-project/web/"
+    ServerName lynx.prod
+    ErrorLog "logs/lynx.prod-error.log"
+    CustomLog "logs/lynx.prod-access.log" common
+    DirectoryIndex "app.php"
+    <Directory "SCIEZKA/DO/PROJEKTU/lynx-project">
         AllowOverride All
         Order allow,deny
         Allow from all
@@ -48,9 +65,13 @@ Do pliku należy dodać wpis vhost dla przykładowej domeny lynx.dev znajdujące
 </VirtualHost>
 ```
 
-Przy wykorzystaniu vhosta należy pamietać o przekierowaniu domeny na adres lokalny w pliku hosts. W systemach Windows:
-` C:\Windows\System32\drivers\etc\hosts`
+Przy wykorzystaniu vhosta należy pamietać o przekierowaniu domen na adres lokalny w pliku hosts. W systemach Windows znajduje się on w folderze:
 
+```
+#C:\Windows\System32\drivers\etc\hosts
+127.0.0.1       lynx.dev
+127.0.0.1       lynx.prod
+```
 
 ### Utworzenie bazy danych ###
 Należy utworzyć bazę danych dla projektu lynx. Dla serwera XAMPP jest dostępny panel phpMyAdmin.
@@ -58,6 +79,7 @@ Należy utworzyć bazę danych dla projektu lynx. Dla serwera XAMPP jest dostęp
 ### Instalacja bazy danych oraz wymaganych bibliotek przed pierwszym uruchomieniem ###
 * `composer install` - Jeśli composer został zainstalowany globalnie
 * W czasie instalacji zostanie wygenerowany także plik konfiguracyjny na podstawie podanych informacji.
+* Po udanej instalacji należy wykonać następującą komendę aby utworzyć tablice na podstawie wstępnych encji: `php app/console doctrine:database:create`
 
 ### Instalacja zależności projektu Node.js ###
 Aby zainstalować zależności projektu Node.js w głównym katalogu projektu należy wykonać polecenie:
@@ -70,3 +92,27 @@ Aby zbudować odpowiednie pliki końcowe (np. CSS i JavaScript) należy w głów
 `grunt`
 
 `grunt watch` - Tryb obserwacji zmian w plikach źródłowych (js, scss) - automatycznie wygeneruje odpowiednie pliki: skompilowane pliki CSS oraz pliki JS. Umożliwia także korzystanie z livereload: https://github.com/gruntjs/grunt-contrib-watch#optionslivereload.
+
+### Praca nad projektem ###
+Po każdej aktualizacji gita należy wykonać poniższe polecenia w podanej kolejności:
+```
+composer update
+php app/console doctrine:database:update -f
+php app/console clear:cache --env=prod
+```
+
+### Dodatkowe pomocne informacje ###
+Wszystkie polecenia można wykonać z poziomu Netbeans IDE poprzez PPM na projekcie w przypadku:
+*`php app/console` po wybraniu z menu `Symfony` polecenia `Run Command...`
+*`composer` po wybraniu z menu `Composer` podanego polecenia
+*`grunt` po wybraniu z menu `Grunt Tasks` podanego polecenia
+*`npm install` po wybraniu polecenia `npm Install`
+
+### Wstępny podział projektu ###
+`App/BootBundle` - Bundle odpowiedzialny za logowanie do serwisu, stronę startową oraz menu
+`App/ManagerBundle` - Bundle odpowiedzialny za obsługę zdarzeń w serwisie
+`App/UserBundle` - Bundle odpowiedzialny za użytkowników, ich rejestrację i podstawowe operacje związane z kontem
+`Lynx/ProjectBundle` - Bundle odpowiedzialny za Projekt i wszystkie rzeczy z nim związane
+`Lynx/TaskBundle` - Bundle odpowiedzialny za pojedyńczy Task i wszystkie rzeczy z nim związane (wyświetlanie i edycja)
+`Lynx/TaskboardBundle` - Bundle odpowiedzialny za wyświetlanie listy tasków
+`Lynx/UserpanelBundle` - Bundle odpowiedzialny za ustawienia dotyczące Taskboardu związane z użytkownikiem
