@@ -1,0 +1,8 @@
+@mixin bg-inverse() {
+  background-color: $bg-inverse;
+  color: #fff;
+}
+
+@mixin bg-darken() {
+  background-color: $bg-darken;
+}

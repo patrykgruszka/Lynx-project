@@ -7,12 +7,15 @@
 /* ==========================================================================
    Components
    ========================================================================== */
-@import "components/_buttons";
-@import "components/_forms";
+@import "components/buttons";
+@import "components/forms";
 
 /* ==========================================================================
    Layout styles
    ========================================================================== */
-@import "layouts/_navigation";
-@import "layouts/_header";
-@import "layouts/_footer";
+@import "layouts/navigation";
+@import "layouts/header";
+@import "layouts/footer";
+
+@import "layouts/kanban-board";
+@import "layouts/kanban-task";

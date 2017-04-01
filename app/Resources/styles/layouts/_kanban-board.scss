@@ -1,0 +1,47 @@
+.kanban-board {
+
+}
+
+header.kanban-header {
+  .header-title {
+    margin-top: 75px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+  }
+
+  .header-brand-container {
+    text-align: right;
+  }
+
+  .header-brand {
+    display: block;
+    margin-left: auto;
+    height: 120px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+header.kanban-group-header {
+  @include bg-darken;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+
+  h2.kanban-group-title {
+    margin: 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
+
+ul.kanban-group {
+  @include  bg-darken;
+  margin: 0;
+  padding: 12px 15px;
+  min-height: 300px;
+  list-style: none;
+}

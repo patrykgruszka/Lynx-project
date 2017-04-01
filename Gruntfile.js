@@ -16,6 +16,7 @@ module.exports = function (grunt) {
             scripts: {
                 src: [
                     'node_modules/jquery/dist/jquery.slim.js',
+                    '<%= manifest.path.source %>/vendor/jquery-ui.min.js',
                     'node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
                     'node_modules/angular/angular.min.js',
                     '<%= manifest.path.source %>/scripts/**/*.js'
