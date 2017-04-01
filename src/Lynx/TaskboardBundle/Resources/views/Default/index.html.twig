@@ -1,1 +1,74 @@
-Hello World!
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Kanban Board - Lynx</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="/assets/styles/bundle.css">
+
+</head>
+<body>
+
+<div id="kanban-board" class="kanban-board">
+    <div class="container-fluid">
+        <header class="kanban-header">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1 class="header-title">Kanban Board <small>DEMO</small></h1>
+                </div>
+                <div class="col-sm-6">
+                    <div class="header-brand-container">
+                        <img src="/assets/img/brand/lynx.png" class="header-brand" alt="Lynx brand">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="row">
+            <div class="col-xs-4">
+                <header class="kanban-group-header">
+                    <h2 class="kanban-group-title">To do</h2>
+                </header>
+                <ul class="kanban-group todo-group">
+                    <li class="kanban-task">
+                        <h3 class="task-title">Task 1</h3>
+                        <p class="task-description">Try mashing up the whipped cream watermelons with slobbery triple sec and cocktail sauce, simmered.</p>
+                    </li>
+                    <li class="kanban-task">
+                        <h3 class="task-title">Task 2</h3>
+                        <p class="task-description">Gooey, bloody pudding is best mixed with sour water.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-4">
+                <header class="kanban-group-header">
+                    <h2 class="kanban-group-title">In progress</h2>
+                </header>
+                <ul class="kanban-group in-progress-group">
+                    <li class="kanban-task">
+                        <h3 class="task-title">Task 4</h3>
+                        <p class="task-description">Coffee soup is just not the same without baking powder and rich juicy pork butts.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-4">
+                <header class="kanban-group-header">
+                    <h2 class="kanban-group-title">Done</h2>
+                </header>
+                <ul class="kanban-group done-group">
+                    <li class="kanban-task">
+                        <h3 class="task-title">Task 3</h3>
+                        <p class="task-description">Remember: shaken ramen tastes best when cooked in a casserole covered with baking powder.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/assets/scripts/bundle.js"></script>
+</body>
+</html>
