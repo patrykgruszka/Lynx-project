@@ -34,12 +34,12 @@ Do pliku należy dodać wpis vhost dla przykładowej domeny lynx.dev oraz lynx.p
 ```
 
 <VirtualHost *:80>
-    DocumentRoot "SCIEZKA/DO/PROJEKTU/web/app_dev.php"
+    DocumentRoot "SCIEZKA/DO/PROJEKTU/web"
     ServerName lynx.dev
     ErrorLog "logs/lynx.dev-error.log"
     CustomLog "logs/lynx.dev-access.log" common
     DirectoryIndex "app_dev.php"
-    <Directory "SCIEZKA/DO/PROJEKTU/lynx-project">
+    <Directory "SCIEZKA/DO/PROJEKTU">
         AllowOverride All
         Order allow,deny
         Allow from all
@@ -50,12 +50,12 @@ Do pliku należy dodać wpis vhost dla przykładowej domeny lynx.dev oraz lynx.p
 
 
 <VirtualHost *:80>
-    DocumentRoot "SCIEZKA/DO/PROJEKTU/lynx-project/web/"
+    DocumentRoot "SCIEZKA/DO/PROJEKTU/web"
     ServerName lynx.prod
     ErrorLog "logs/lynx.prod-error.log"
     CustomLog "logs/lynx.prod-access.log" common
     DirectoryIndex "app.php"
-    <Directory "SCIEZKA/DO/PROJEKTU/lynx-project">
+    <Directory "SCIEZKA/DO/PROJEKTU>
         AllowOverride All
         Order allow,deny
         Allow from all
