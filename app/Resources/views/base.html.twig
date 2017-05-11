@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{% block title %}Welcome{% endblock %} - Lynx</title>
+    <title>{% block pageTitle %}Welcome{% endblock %} - Lynx</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,7 +12,15 @@
 </head>
 <body>
 
-{% block body %}{% endblock %}
+<div class="app-wrapper">
+    {% include 'sections/sidebar.html.twig' %}
+    <div class="app-content-wrapper">
+        <div class="app-content">
+            {% include 'sections/header.html.twig' with {pageTitle: block('pageTitle')} %}
+            {% block body %}{% endblock %}
+        </div>
+    </div>
+</div>
 
 <script src="/assets/scripts/bundle.js"></script>
 </body>
