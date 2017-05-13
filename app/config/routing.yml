@@ -1,15 +1,15 @@
 priority:
-    resource: "@LynxPriorityBundle/Resources/config/routing.yml"
+    resource: "@LynxPriorityBundle/Controller/"
     type:     annotation
     prefix:   /priority
 
 status:
-    resource: "@LynxStatusBundle/Resources/config/routing.yml"
+    resource: "@LynxStatusBundle/Controller/"
     type:     annotation
     prefix:   /status
 
 sprint:
-    resource: "@LynxSprintBundle/Resources/config/routing.yml"
+    resource: "@LynxSprintBundle/Controller/"
     type:     annotation
     prefix:   /sprint
 
