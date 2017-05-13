@@ -22,7 +22,7 @@ module.exports = function (grunt) {
                     'node_modules/angular/angular.js',
                     'node_modules/angular-route/angular-route.js',
                     'web/app/app.js',
-                    'web/app/*/*.js',
+                    'web/app/*/*.module.js',
                     'web/app/**/*.js',
                     '<%= manifest.path.source %>/scripts/main.js'
                 ],
@@ -69,7 +69,8 @@ module.exports = function (grunt) {
             },
             scripts: {
                 files: [
-                    '<%= manifest.path.source %>/scripts/**/*.js'
+                    '<%= manifest.path.source %>/scripts/**/*.js',
+                    'web/app/**/*.js'
                 ],
                 tasks: ['jshint', 'concat:scripts']
             }
