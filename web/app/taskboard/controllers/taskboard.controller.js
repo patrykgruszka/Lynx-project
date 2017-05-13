@@ -1,4 +1,4 @@
-lynxApp.controller('TaskboardController', function TaskboardController($scope) {
+taskboardModule.controller('TaskboardController', function TaskboardController($scope) {
     $scope.toDoTasks = [
         {
             'name': 'Task 1',

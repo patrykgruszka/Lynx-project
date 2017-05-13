@@ -99,6 +99,9 @@ Po każdej aktualizacji gita należy wykonać poniższe polecenia w podanej kole
 composer update
 php app/console doctrine:database:update -f
 php app/console clear:cache --env=prod
+npm install
+grunt
+
 ```
 
 ### Dodatkowe pomocne informacje ###
