@@ -1,4 +1,12 @@
 <?php
+namespace Lynx\TaskBundle\Entity;
+use Doctrine\ORM\Mapping as ORM;
+
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="task")
+ */
 
 
 class Task {
@@ -20,19 +28,19 @@ class Task {
     private $id;
     
     /**
-     * @ORM\ManyToOne(targetEntity="Sprint", inversedBy="tasks")
+     * @ORM\ManyToOne(targetEntity="Lynx\SprintBundle\Entity\Sprint", inversedBy="tasks")
      * @ORM\JoinColumn(name="sprint_id", referencedColumnName="id")
      */
     private $sprint;
     
     /**
-     * @ORM\ManyToOne(targetEntity="Priority")
+     * @ORM\ManyToOne(targetEntity="Lynx\PriorityBundle\Entity\Priority")
      * @ORM\JoinColumn(name="priority_id", referencedColumnName="id")
      */
     private $priority;
     
     /**
-     * @ORM\ManyToOne(targetEntity="Status")
+     * @ORM\ManyToOne(targetEntity="Lynx\StatusBundle\Entity\Status")
      * @ORM\JoinColumn(name="status_id", referencedColumnName="id")
      */
     private $status;

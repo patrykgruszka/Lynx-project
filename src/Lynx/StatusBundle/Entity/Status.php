@@ -1,4 +1,13 @@
 <?php
+namespace Lynx\StatusBundle\Entity;
+use Doctrine\ORM\Mapping as ORM;
+
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="status")
+ */
+
 
 class Status {
     /**

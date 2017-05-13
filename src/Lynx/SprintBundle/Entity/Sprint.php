@@ -1,4 +1,14 @@
 <?php
+namespace Lynx\SprintBundle\Entity;
+use Doctrine\ORM\Mapping as ORM;
+
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="sprint")
+ */
+
+
 
 class Sprint {
     /**
@@ -19,13 +29,13 @@ class Sprint {
     private $id;
     
     /**
-     * @ORM\ManyToOne(targetEntity="Project", inversedBy="sprints")
+     * @ORM\ManyToOne(targetEntity="Lynx\ProjectBundle\Entity\Project", inversedBy="sprints")
      * @ORM\JoinColumn(name="project_id", referencedColumnName="id")
      */
     private $project;
     
     /**
-     * @ORM\OneToMany(targetEntity="Task", mappedBy="sprint")
+     * @ORM\OneToMany(targetEntity="Lynx\TaskBundle\Entity\Task", mappedBy="sprint")
      */
     private $tasks;
     
@@ -75,4 +85,28 @@ class Sprint {
     }
 
 
+
+    /**
+     * Add task
+     *
+     * @param \Lynx\TaskBundle\Entity\Task $task
+     *
+     * @return Sprint
+     */
+    public function addTask(\Lynx\TaskBundle\Entity\Task $task)
+    {
+        $this->tasks[] = $task;
+
+        return $this;
+    }
+
+    /**
+     * Remove task
+     *
+     * @param \Lynx\TaskBundle\Entity\Task $task
+     */
+    public function removeTask(\Lynx\TaskBundle\Entity\Task $task)
+    {
+        $this->tasks->removeElement($task);
+    }
 }
