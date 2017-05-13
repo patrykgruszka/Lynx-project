@@ -28,9 +28,9 @@ class AppKernel extends Kernel
             new Lynx\TaskboardBundle\LynxTaskboardBundle(),
             new Lynx\ProjectBundle\LynxProjectBundle(),
             new Lynx\TaskBundle\LynxTaskBundle(),
-            new Lynx\SprintBundle\SprintBundle(),
-            new Lynx\StatusBundle\StatusBundle(),
-            new Lynx\PriorityBundle\PriorityBundle(),
+            new Lynx\SprintBundle\LynxSprintBundle(),
+            new Lynx\StatusBundle\LynxStatusBundle(),
+            new Lynx\PriorityBundle\LynxPriorityBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

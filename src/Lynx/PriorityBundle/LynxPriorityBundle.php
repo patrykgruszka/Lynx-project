@@ -4,6 +4,6 @@ namespace Lynx\PriorityBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class PriorityBundle extends Bundle
+class LynxPriorityBundle extends Bundle
 {
 }
