@@ -1,0 +1,21 @@
+<h2 class="mb-sm">Add new project</h2>
+
+<div class="row">
+    <div class="col-xs-12 col-lg-8">
+        <form ng-submit="$ctrl.submitForm()">
+            <div class="form-group">
+                <label for="project-name-input">Project name</label>
+                <input id="project-name-input" ng-model="$ctrl.formData.name" type="text" class="form-control"  placeholder="Enter project name here">
+            </div>
+            <div class="form-group">
+                <label for="project-description-input">Description</label>
+                <textarea id="project-description-input" ng-model="$ctrl.formData.description" class="form-control" rows="3" placeholder="Goals and objectives of the project"></textarea>
+            </div>
+
+            <div class="button-wrapper mt-sm">
+                <a href="#!/list" class="btn btn-primary">Back to list</a>
+                <button type="submit" class="btn btn-success">Create project</button>
+            </div>
+        </form>
+    </div>
+</div>

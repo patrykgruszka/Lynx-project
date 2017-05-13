@@ -1,1 +1,1 @@
-var taskboardModule = angular.module('taskboardModule', []);
+var taskboardModule = angular.module('taskboardModule', ['ngRoute']);
