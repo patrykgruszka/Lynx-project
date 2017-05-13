@@ -5,7 +5,8 @@ module.exports = function (grunt) {
         manifest: grunt.file.readJSON('manifest.json'),
         jshint: {
             scripts: [
-                '<%= manifest.path.source %>/scripts/**/*.js'
+                '<%= manifest.path.source %>/scripts/**/*.js',
+                'web/app/**/*.js'
             ]
         },
         concat: {
@@ -18,8 +19,12 @@ module.exports = function (grunt) {
                     'node_modules/jquery/dist/jquery.slim.js',
                     '<%= manifest.path.source %>/vendor/jquery-ui.min.js',
                     'node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
-                    'node_modules/angular/angular.min.js',
-                    '<%= manifest.path.source %>/scripts/**/*.js'
+                    'node_modules/angular/angular.js',
+                    'node_modules/angular-route/angular-route.js',
+                    'web/app/app.js',
+                    'web/app/*/*.js',
+                    'web/app/**/*.js',
+                    '<%= manifest.path.source %>/scripts/main.js'
                 ],
                 dest: '<%= manifest.path.dist %>/scripts/bundle.js',
                 options: {

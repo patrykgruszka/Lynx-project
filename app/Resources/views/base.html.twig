@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="{% block ngApp %}{% endblock %}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -17,6 +17,7 @@
     <div class="app-content-wrapper">
         <div class="app-content">
             {% include 'sections/header.html.twig' with {pageTitle: block('pageTitle')} %}
+
             {% block body %}{% endblock %}
         </div>
     </div>
