@@ -18,8 +18,10 @@ module.exports = function (grunt) {
                     'node_modules/jquery/dist/jquery.slim.js',
                     '<%= manifest.path.source %>/vendor/jquery-ui.min.js',
                     'node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
-                    'node_modules/angular/angular.min.js',
-                    '<%= manifest.path.source %>/scripts/**/*.js'
+                    'node_modules/angular/angular.js',
+                    '<%= manifest.path.source %>/scripts/app.js',
+                    'src/Lynx/TaskboardBundle/Resources/scripts/**/*.js',
+                    '<%= manifest.path.source %>/scripts/main.js'
                 ],
                 dest: '<%= manifest.path.dist %>/scripts/bundle.js',
                 options: {
