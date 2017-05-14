@@ -97,7 +97,7 @@ Aby zbudować odpowiednie pliki końcowe (np. CSS i JavaScript) należy w głów
 Po każdej aktualizacji gita należy wykonać poniższe polecenia w podanej kolejności:
 ```
 composer update
-php app/console doctrine:database:update -f
+php app/console doctrine:schema:update -f
 php app/console clear:cache --env=prod
 npm install
 grunt

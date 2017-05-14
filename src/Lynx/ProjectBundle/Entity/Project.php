@@ -32,7 +32,7 @@ class Project {
     private $sprints;
     public function __construct()
     {
-        $this->sprints = new ArrayCollection();
+//        $this->sprints = new ArrayCollection();
     }
     public function getName() {
         return $this->name;

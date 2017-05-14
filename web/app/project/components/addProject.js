@@ -1,6 +1,6 @@
 angular.module('projectModule').component('addProject', {
     templateUrl: '/app/project/components/addProject.html',
-    controller: function AddProjectController($scope) {
+    controller: function AddProjectController($scope, $http) {
         var self = this;
 
         self.formData = {
@@ -9,7 +9,11 @@ angular.module('projectModule').component('addProject', {
         };
 
         self.submitForm = function() {
-            console.log(self.formData);
+
+            console.log($http);
+            $http.post('/project/save', JSON.stringify(self.formData)).success(function(response){
+                console.log(response);
+            });
         };
     }
 });

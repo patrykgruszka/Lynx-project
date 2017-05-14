@@ -82,7 +82,25 @@ class DefaultController extends Controller
 //            return new Response('Created user '.$user->getName());
         }
 
+
+  /**
+   * @Route("/save")
+   */
+  public function saveAction(Request $request)
+  {
+    $data = json_decode($request->getContent());
+
+
+    $project = new Project();
+    $project->setName($data->name);
+    $project->setDescription($data->description);
+
+    $entityManager = $this->getDoctrine()->getManager();
+    $entityManager->persist($project);
+    $entityManager->flush();
     
+    return json_encode($data);
+  }
     
     
 }
