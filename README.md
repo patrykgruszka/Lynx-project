@@ -75,10 +75,21 @@ Przy wykorzystaniu vhosta należy pamietać o przekierowaniu domen na adres loka
 
 ### Utworzenie bazy danych ###
 Należy utworzyć bazę danych dla projektu lynx. Dla serwera XAMPP jest dostępny panel phpMyAdmin.
+* W panelu XAMPP control panel uruchamiamy usługi Apache oraz MySql 
+* Uruchamiamy akcję admin dla usługi MySql
+* Tworzymy nową bazę np. lynx z metodą porównywania wpisów ustawioną na utf8_general_ci
 
 ### Instalacja bazy danych oraz wymaganych bibliotek przed pierwszym uruchomieniem ###
 * `composer install` - Jeśli composer został zainstalowany globalnie
-* W czasie instalacji zostanie wygenerowany także plik konfiguracyjny na podstawie podanych informacji.
+* W czasie instalacji zostanie wygenerowany także plik konfiguracyjny na podstawie podanych informacji. 
+* Podczas instalacji znaczące są informace dotyczące połączenia z bazą danych. Poniżej konfiguracja domyślna dla bazy danych lynx na porcie 3306 i użytkownika root bez hasła
+```
+database_host: 127.0.0.1
+database_port: 3306
+database_name: lynx
+database_user: root
+database_password: null
+```
 * Po udanej instalacji należy wykonać następującą komendę aby utworzyć tablice na podstawie wstępnych encji: `php app/console doctrine:database:create`
 
 ### Instalacja zależności projektu Node.js ###
