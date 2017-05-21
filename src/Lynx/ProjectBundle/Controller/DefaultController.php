@@ -11,7 +11,7 @@ use Lynx\ProjectBundle\Entity\Project;
 class DefaultController extends Controller
 {
 
-    
+
     /**
      * @Route("/")
      */
@@ -19,27 +19,24 @@ class DefaultController extends Controller
     {
         return $this->render('LynxProjectBundle:Default:index.html.twig');
     }
-    
-    
-    
-    
+
+
+
+
     /**
-     * @Route("/get")
+     * @Route("/getList")
      */
-    public function getAction(){
-        $em = $this->getDoctrine()->getManager();
-        $projectRepository = $em->getRepository('LynxProjectBundle:Project');
-        $projects = $projectRepository->findAll();
-        $input = "";
-        foreach ($projects as $project) {
-            $input = $input.$project->getName()."\r\n";
-        }
-        return $this->render('default/demo/demo.html.twig', [
-        'input' => $input,
-        ]
-        );
-    }
-    
+  public function getList(){
+    $em = $this->getDoctrine()->getManager();
+    $projectRepository = $em->getRepository('LynxProjectBundle:Project');
+    $projects = $projectRepository->findAll();
+
+    $serializer = $this->get('jms_serializer');
+    $response = $serializer->serialize($projects,'json');
+
+    return new Response($response);
+  }
+
     /**
      * Creates a new Post entity.
      *
@@ -98,9 +95,9 @@ class DefaultController extends Controller
     $entityManager = $this->getDoctrine()->getManager();
     $entityManager->persist($project);
     $entityManager->flush();
-    
-    return json_encode($data);
+
+    return new Response();
   }
-    
-    
+
+
 }

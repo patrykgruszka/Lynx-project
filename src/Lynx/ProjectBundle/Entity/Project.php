@@ -1,5 +1,6 @@
 <?php
 namespace Lynx\ProjectBundle\Entity;
+use Lynx\SprintBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 
@@ -26,10 +27,7 @@ class Project {
      */
     private $id;
     
-    /**
-     * @ORM\OneToMany(targetEntity="Lynx\SprintBundle\Entity\Sprint", mappedBy="project")
-     */
-    private $sprints;
+
     public function __construct()
     {
 //        $this->sprints = new ArrayCollection();
@@ -46,9 +44,9 @@ class Project {
         return $this->id;
     }
 
-    public function getSprints() {
-        return $this->sprints;
-    }
+//    public function getSprints() {
+//        return $this->sprints;
+//    }
 
     public function setName($name) {
         $this->name = $name;
@@ -62,9 +60,9 @@ class Project {
         $this->id = $id;
     }
 
-    public function setSprints($sprints) {
-        $this->sprints = $sprints;
-    }
+//    public function setSprints($sprints) {
+//        $this->sprints = $sprints;
+//    }
 
     /**
      * Add sprint
@@ -73,20 +71,20 @@ class Project {
      *
      * @return Project
      */
-    public function addSprint(\Lynx\ProjectBundle\Entity\Sprint $sprint)
-    {
-        $this->sprints[] = $sprint;
-
-        return $this;
-    }
+//    public function addSprint(\Lynx\ProjectBundle\Entity\Sprint $sprint)
+//    {
+//        $this->sprints[] = $sprint;
+//
+//        return $this;
+//    }
 
     /**
      * Remove sprint
      *
      * @param \Lynx\ProjectBundle\Entity\Sprint $sprint
      */
-    public function removeSprint(\Lynx\ProjectBundle\Entity\Sprint $sprint)
-    {
-        $this->sprints->removeElement($sprint);
-    }
+//    public function removeSprint(\Lynx\ProjectBundle\Entity\Sprint $sprint)
+//    {
+//        $this->sprints->removeElement($sprint);
+//    }
 }
