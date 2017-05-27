@@ -1,10 +1,18 @@
 <div class="app-sidebar-wrapper">
     <nav class="app-sidebar">
         <ul class="sidebar-nav-list">
-            <li><a href="/taskboard" class="nav-link">Taskboard</a></li>
-            <li><a href="/project" class="nav-link">Projects</a></li>
-            <li><a href="/task" class="nav-link">Tasks</a></li>
-            <li><a href="/userpanel" class="nav-link">User panel</a></li>
+            <li{% if app.request.get('_route') == 'lynx_taskboard_default_index' %} class="active"{% endif %}>
+                <a href="{{ path('lynx_taskboard_default_index') }}" class="nav-link">Taskboard</a>
+            </li>
+            <li{% if app.request.get('_route') == 'lynx_project_default_index' %} class="active"{% endif %}>
+                <a href="{{ path('lynx_project_default_index') }}" class="nav-link">Projects</a>
+            </li>
+            <li{% if app.request.get('_route') == 'lynx_task_default_index' %} class="active"{% endif %}>
+                <a href="{{ path('lynx_task_default_index') }}" class="nav-link">Tasks</a>
+            </li>
+            <li{% if app.request.get('_route') == 'lynx_userpanel_default_index' %} class="active"{% endif %}>
+                <a href="{{ path('lynx_userpanel_default_index') }}" class="nav-link">User panel</a>
+            </li>
         </ul>
     </nav>
 </div>

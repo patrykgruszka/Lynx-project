@@ -22,6 +22,12 @@ ul.sidebar-nav-list {
     &:last-of-type {
       border-bottom: none;
     }
+
+    &.active {
+      a.nav-link {
+        background: $brand-primary;
+      }
+    }
   }
 
   a.nav-link {
@@ -34,6 +40,10 @@ ul.sidebar-nav-list {
     &:hover {
       text-decoration: none;
       background: rgba(#fff, 0.1);
+    }
+
+    &:focus {
+      text-decoration: none;
     }
   }
 }
