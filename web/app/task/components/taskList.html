@@ -1,0 +1,47 @@
+<div class="tasks-list-container">
+
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <form>
+                <div class="form-group">
+                    <label for="project-select">Select project from list</label>
+                    <select name="projct" id="project-select" class="form-control"
+                            ng-model="$ctrl.project"
+                            ng-options="project.name for project in $ctrl.projectsList"
+                            ng-change="$ctrl.selectProject()"></select>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <table class="table table-striped" ng-show="$ctrl.project && $ctrl.tasksList.length">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="task in $ctrl.tasksList">
+            <td>{{task.id}}</td>
+            <td>{{task.name}}</td>
+            <td>{{task.description}}</td>
+            <td><button type="button" class="btn btn-sm btn-primary">Edit</button> <button type="button" class="btn btn-sm btn-danger">Delete</button></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="alert alert-info" ng-show="!$ctrl.project">
+        Select project from list above to see assigned tasks.
+    </div>
+
+    <div ng-show="$ctrl.project">
+        <div class="alert alert-info" ng-hide="$ctrl.tasksList.length">
+            There are no tasks for project <b>{{ $ctrl.project.name }}</b>.
+        </div>
+
+        <a href="#!/add" class="btn btn-success">Add new task</a>
+    </div>
+</div>
