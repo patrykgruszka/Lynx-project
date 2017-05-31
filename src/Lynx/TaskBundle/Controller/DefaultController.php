@@ -40,15 +40,17 @@ class DefaultController extends Controller
       {
         $data = json_decode($request->getContent());
         $em = $this->getDoctrine()->getManager();
+        $project = $em->getRepository('LynxProjectBundle:Project')->findOneByName($data->project);
         $priority = $em->getRepository('LynxPriorityBundle:Priority')->findOneByName($data->priority);
         $status = $em->getRepository('LynxStatusBundle:Status')->findOneByName($data->status);
-        
+
         $task = new Task();
         $task->setName($data->name);
         $task->setDescription($data->description);
+        $task->setProject($project);
         $task->setPriority($priority);
         $task->setStatus($status);
-        if ($data->sprint != null){
+        if (isset($data->sprint)){
             $sprint = $em->getRepository('LynxSprintBundle:Sprint')->findOneByName($data->sprint);
             $task->setSprint($sprint);
         }

@@ -28,6 +28,12 @@ class Task {
     private $id;
     
     /**
+     * @ORM\ManyToOne(targetEntity="Lynx\ProjectBundle\Entity\Project")
+     * @ORM\JoinColumn(name="project_id", referencedColumnName="id")
+     */
+    private $project;
+
+    /**
      * @ORM\ManyToOne(targetEntity="Lynx\SprintBundle\Entity\Sprint", inversedBy="tasks")
      * @ORM\JoinColumn(name="sprint_id", referencedColumnName="id")
      */
@@ -79,8 +85,16 @@ class Task {
         $this->id = $id;
     }
 
+    public function setProject($project) {
+        $this->project = $project;
+    }
+
     public function setSprint($sprint) {
         $this->sprint = $sprint;
+    }
+
+    public function getProject() {
+        return $this->project;
     }
 
     public function getPriority() {
