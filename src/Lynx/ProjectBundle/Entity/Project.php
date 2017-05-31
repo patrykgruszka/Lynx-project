@@ -1,6 +1,5 @@
 <?php
 namespace Lynx\ProjectBundle\Entity;
-use Lynx\SprintBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 
@@ -30,8 +29,8 @@ class Project {
 
     public function __construct()
     {
-//        $this->sprints = new ArrayCollection();
     }
+
     public function getName() {
         return $this->name;
     }
@@ -43,10 +42,6 @@ class Project {
     public function getId() {
         return $this->id;
     }
-
-//    public function getSprints() {
-//        return $this->sprints;
-//    }
 
     public function setName($name) {
         $this->name = $name;
@@ -60,9 +55,6 @@ class Project {
         $this->id = $id;
     }
 
-//    public function setSprints($sprints) {
-//        $this->sprints = $sprints;
-//    }
 
     /**
      * Add sprint

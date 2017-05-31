@@ -21,4 +21,36 @@ class DefaultController extends Controller
     {
         return $this->render('LynxPriorityBundle:Default:index.html.twig');
     }
+    /**
+     * @Route("/getList")
+     */
+    public function getList(){
+      $em = $this->getDoctrine()->getManager();
+      $priorityRepository = $em->getRepository('LynxPriorityBundle:Priority');
+      $priorities = $priorityRepository->findAll();
+
+      $serializer = $this->get('jms_serializer');
+      $response = $serializer->serialize($priorities,'json');
+
+      return new Response($response);
+    }
+    
+   /**
+   * @Route("/save")
+   */
+  public function saveAction(Request $request)
+  {
+    $data = json_decode($request->getContent());
+
+
+    $priority = new Priority();
+    $priority->setName($data->name);
+    $priority->setDescription($data->description);
+
+    $entityManager = $this->getDoctrine()->getManager();
+    $entityManager->persist($priority);
+    $entityManager->flush();
+
+    return new Response();
+  }
 }
