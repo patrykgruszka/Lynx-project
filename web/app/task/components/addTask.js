@@ -1,6 +1,6 @@
 angular.module('taskModule').component('addTask', {
     templateUrl: '/app/task/components/addTask.html',
-    controller: function AddTaskController($scope, $http, $location) {
+    controller: function AddTaskController($scope, $http, $q, $location) {
         var self = this;
 
         self.formData = {
@@ -21,21 +21,32 @@ angular.module('taskModule').component('addTask', {
             self.formData.status = self.status.name;
         };
 
-        $http.get('/project/getList').then(function(response) {
+        self.loading = true;
+
+        var projectRequest = $http.get('/project/getList').then(function(response) {
             self.projectList = response.data;
         });
-        $http.get('/priority/getList').then(function(response) {
+
+        var priorityRequest = $http.get('/priority/getList').then(function(response) {
             self.priorityList = response.data;
         });
-        $http.get('/sprint/getList').then(function(response) {
+
+        var sprintRequest = $http.get('/sprint/getList').then(function(response) {
             self.sprintList = response.data;
         });
-        $http.get('/status/getList').then(function(response) {
+
+        var statusRequest = $http.get('/status/getList').then(function(response) {
             self.statusList = response.data;
         });
 
+        $q.all([projectRequest, priorityRequest, sprintRequest, statusRequest]).finally(function() {
+            self.loading = false;
+        });
+
         self.submitForm = function() {
-            $http.post('/task/save', JSON.stringify(self.formData)).then(function(response){});
+            $http.post('/task/save', JSON.stringify(self.formData)).then(function(){
+                $location.path('/list');
+            });
         };
     }
 });
