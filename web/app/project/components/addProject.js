@@ -9,9 +9,8 @@ angular.module('projectModule').component('addProject', {
         };
 
         self.submitForm = function() {
-            $http.post('/project/save', JSON.stringify(self.formData)).then(function(response){
-                $location.path('/').replace();
-                $scope.$apply();
+            $http.post('/project/save', JSON.stringify(self.formData)).then(function(){
+                $location.path('/list');
             });
         };
     }
