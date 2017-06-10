@@ -1,1 +1,8 @@
-Hello World!
+{% extends 'base.html.twig' %}
+
+{% block ngApp %}sprintModule{% endblock %}
+{% block pageTitle %}Sprint{% endblock %}
+
+{% block body %}
+    <div ng-view></div>
+{% endblock %}

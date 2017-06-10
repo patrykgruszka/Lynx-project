@@ -1,0 +1,39 @@
+<h2 class="mb-sm">Add new sprint</h2>
+
+<div ng-show="$ctrl.loading">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h3 class="mv-none">Loading...</h3>
+        </div>
+    </div>
+</div>
+
+<div class="row" ng-hide="$ctrl.loading">
+    <div class="col-xs-12 col-md-8">
+        <form ng-submit="$ctrl.submitForm()">
+
+            <div class="form-group">
+                <label for="sprint-name-input">Sprint name</label>
+                <input id="sprint-name-input" ng-model="$ctrl.formData.name" type="text" class="form-control"  placeholder="Enter sprint name here">
+            </div>
+
+            <div class="form-group">
+                <label for="project-select">Select project from list</label>
+                <select name="project" id="project-select" class="form-control"
+                        ng-model="$ctrl.project"
+                        ng-options="project.name for project in $ctrl.projectList"
+                        ng-change="$ctrl.selectProject()"></select>
+            </div>
+
+            <div class="form-group">
+                <label for="sprint-description-input">Description</label>
+                <textarea id="sprint-description-input" ng-model="$ctrl.formData.description" class="form-control" rows="3" placeholder="Goals and objectives of the sprint"></textarea>
+            </div>
+
+            <div class="button-wrapper mt-sm">
+                <a href="#!/list" class="btn btn-primary">Back to list</a>
+                <button type="submit" class="btn btn-success">Create sprint</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="sprints-list-container">
+
+    <div ng-show="$ctrl.loading">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3 class="mv-none">Loading...</h3>
+            </div>
+        </div>
+    </div>
+
+    <div ng-hide="$ctrl.loading">
+        <table class="table table-striped" ng-show="$ctrl.sprintsList.length">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Project</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="sprint in $ctrl.sprintsList">
+                <td>{{sprint.id}}</td>
+                <td>{{sprint.name}}</td>
+                <td>{{sprint.description}}</td>
+                <td>{{sprint.project.name}}</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="alert alert-info" ng-hide="$ctrl.sprintsList.length">
+            There are no sprints in database. Start now, and add your first sprint.
+        </div>
+
+        <a href="#!/add" class="btn btn-success">Add new sprint</a>
+    </div>
+</div>

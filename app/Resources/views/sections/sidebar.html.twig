@@ -7,6 +7,9 @@
             <li{% if app.request.get('_route') == 'lynx_project_default_index' %} class="active"{% endif %}>
                 <a href="{{ path('lynx_project_default_index') }}" class="nav-link">Projects</a>
             </li>
+            <li{% if app.request.get('_route') == 'lynx_sprint_default_index' %} class="active"{% endif %}>
+                <a href="{{ path('lynx_sprint_default_index') }}" class="nav-link">Sprints</a>
+            </li>
             <li{% if app.request.get('_route') == 'lynx_task_default_index' %} class="active"{% endif %}>
                 <a href="{{ path('lynx_task_default_index') }}" class="nav-link">Tasks</a>
             </li>

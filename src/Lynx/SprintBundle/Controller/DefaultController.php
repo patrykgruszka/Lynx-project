@@ -38,7 +38,7 @@ class DefaultController extends Controller
   public function saveAction(Request $request)
   {
     $data = json_decode($request->getContent());
-    
+    $em = $this->getDoctrine()->getManager();
     $project = $em->getRepository('LynxProjectBundle:Project')->findOneByName($data->project);
 
     $sprint = new Sprint();

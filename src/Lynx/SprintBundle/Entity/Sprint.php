@@ -41,7 +41,6 @@ class Sprint {
     
     public function __construct()
     {
-        $this->tasks = new ArrayCollection();
     }
     
     public function getName() {
