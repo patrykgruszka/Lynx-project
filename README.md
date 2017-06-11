@@ -123,7 +123,7 @@ Wszystkie polecenia można wykonać z poziomu Netbeans IDE poprzez PPM na projek
 *`npm install` po wybraniu polecenia `npm Install`
 
 ### Wstępny podział projektu ###
-`App/BootBundle` - Bundle odpowiedzialny za logowanie do serwisu, stronę startową oraz menu
+`App/ApiBundle` - Bundle odpowiedzialny za logowanie do serwisu, stronę startową oraz menu
 `App/ManagerBundle` - Bundle odpowiedzialny za obsługę zdarzeń w serwisie
 `App/UserBundle` - Bundle odpowiedzialny za użytkowników, ich rejestrację i podstawowe operacje związane z kontem
 `Lynx/ProjectBundle` - Bundle odpowiedzialny za Projekt i wszystkie rzeczy z nim związane

@@ -1,4 +1,4 @@
 services:
-#    app_boot.example:
-#        class: App\BootBundle\Example
+#    app_api.example:
+#        class: App\ApiBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]

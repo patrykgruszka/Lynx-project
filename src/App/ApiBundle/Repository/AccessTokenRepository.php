@@ -1,6 +1,6 @@
 <?php
 
-namespace App\BootBundle\Repository;
+namespace App\ApiBundle\Repository;
 
 /**
  * AccessTokenRepository

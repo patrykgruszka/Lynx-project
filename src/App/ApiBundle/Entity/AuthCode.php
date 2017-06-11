@@ -1,17 +1,17 @@
 <?php
 
-namespace App\BootBundle\Entity;
+namespace App\ApiBundle\Entity;
 
-use FOS\OAuthServerBundle\Entity\RefreshToken as BaseRefreshToken;
+use FOS\OAuthServerBundle\Entity\AuthCode as BaseAuthCode;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * RefreshToken
+ * AuthCode
  *
- * @ORM\Table(name="lynx_oauth_refresh_token")
- * @ORM\Entity(repositoryClass="App\BootBundle\Repository\RefreshTokenRepository")
+ * @ORM\Table(name="lynx_oauth_code")
+ * @ORM\Entity(repositoryClass="App\ApiBundle\Repository\AuthCodeRepository")
  */
-class RefreshToken extends BaseRefreshToken
+class AuthCode extends BaseAuthCode
 {
     /**
      * @var int
@@ -21,7 +21,6 @@ class RefreshToken extends BaseRefreshToken
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
-
 
     /**
     * @ORM\ManyToOne(targetEntity="Client")

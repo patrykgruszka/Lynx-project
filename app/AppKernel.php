@@ -21,7 +21,7 @@ class AppKernel extends Kernel
             new FOS\OAuthServerBundle\FOSOAuthServerBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
-            new App\BootBundle\AppBootBundle(),
+            new App\ApiBundle\AppApiBundle(),
             new App\ManagerBundle\AppManagerBundle(),
             new App\UserBundle\AppUserBundle(),
             new Lynx\UserpanelBundle\LynxUserpanelBundle(),

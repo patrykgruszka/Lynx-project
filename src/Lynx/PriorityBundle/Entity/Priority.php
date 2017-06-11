@@ -5,7 +5,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="priority")
+ * @ORM\Table(name="lynx_priority")
  */
 
 class Priority {

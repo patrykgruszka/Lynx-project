@@ -5,6 +5,9 @@ security:
         App\UserBundle\Entity\User:
             algorithm: bcrypt
             cost: 12
+        FOS\UserBundle\Model\UserInterface:
+            algorithm: bcrypt
+            cost: 12
             
     providers:
         fos_userbundle:
@@ -18,12 +21,11 @@ security:
 
         oauth_authorize:
             pattern:    ^/oauth/v2/auth
-            http_basic: ~
-#            form_login:
-#                provider: fos_userbundle
-#                check_path: /oauth/v2/auth/login_check
-#                login_path: /oauth/v2/auth/login
-#            anonymous: true
+            form_login:
+                provider: fos_userbundle
+                check_path: /oauth/v2/auth_login_check
+                login_path: /oauth/v2/auth_login
+            anonymous: true
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
@@ -38,15 +40,26 @@ security:
             form_login:
                 provider: fos_userbundle
                 csrf_provider: form.csrf_provider
+                login_path: /
+                check_path: /login_check
+                always_use_default_target_path: false
+                default_target_path: /taskboard
             logout:       true
             anonymous:    true
 
     access_control:
-        - { path: ^/login, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/$, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin/, role: ROLE_ADMIN }
-        - { path: ^/api, roles: [ IS_AUTHENTICATED_FULLY ] }
+        - { path: ^/api/, roles: [ IS_AUTHENTICATED_FULLY ] }
+        - { path: ^/priority/, roles: [ IS_AUTHENTICATED_FULLY ] }
+        - { path: ^/status/, roles: [ IS_AUTHENTICATED_FULLY ] }
+        - { path: ^/sprint/, roles: [ IS_AUTHENTICATED_FULLY ] }
+        - { path: ^/task/, roles: [ IS_AUTHENTICATED_FULLY ] }
+        - { path: ^/project/, roles: [ IS_AUTHENTICATED_FULLY ] }
+        - { path: ^/taskboard/, roles: [ IS_AUTHENTICATED_FULLY ] }
+        - { path: ^/userpanel/, roles: [ IS_AUTHENTICATED_FULLY ] }
 
     role_hierarchy:
         ROLE_ADMIN:       ROLE_USER

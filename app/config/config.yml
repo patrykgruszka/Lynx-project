@@ -2,7 +2,7 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
-    - { resource: "@AppBootBundle/Resources/config/services.yml" }
+    - { resource: "@AppApiBundle/Resources/config/services.yml" }
     - { resource: "@AppManagerBundle/Resources/config/services.yml" }
     - { resource: "@AppUserBundle/Resources/config/services.yml" }
     - { resource: "@LynxUserpanelBundle/Resources/config/services.yml" }
@@ -166,10 +166,10 @@ fos_user:
 
 fos_oauth_server:
     db_driver: orm
-    client_class:        App\BootBundle\Entity\Client
-    access_token_class:  App\BootBundle\Entity\AccessToken
-    refresh_token_class: App\BootBundle\Entity\RefreshToken
-    auth_code_class:     App\BootBundle\Entity\AuthCode
+    client_class:        App\ApiBundle\Entity\Client
+    access_token_class:  App\ApiBundle\Entity\AccessToken
+    refresh_token_class: App\ApiBundle\Entity\RefreshToken
+    auth_code_class:     App\ApiBundle\Entity\AuthCode
     service:
         user_provider: fos_user.user_provider.username
         options:

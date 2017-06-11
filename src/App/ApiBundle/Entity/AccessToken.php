@@ -1,6 +1,6 @@
 <?php
 
-namespace App\BootBundle\Entity;
+namespace App\ApiBundle\Entity;
 
 use FOS\OAuthServerBundle\Entity\AccessToken as BaseAccessToken;
 use Doctrine\ORM\Mapping as ORM;
@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  * AccessToken
  *
  * @ORM\Table(name="lynx_oauth_access_token")
- * @ORM\Entity(repositoryClass="App\BootBundle\Repository\AccessTokenRepository")
+ * @ORM\Entity(repositoryClass="App\ApiBundle\Repository\AccessTokenRepository")
  */
 class AccessToken extends BaseAccessToken
 {

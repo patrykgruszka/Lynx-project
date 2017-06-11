@@ -1,6 +1,6 @@
 <?php
 
-namespace App\BootBundle\Entity;
+namespace App\ApiBundle\Entity;
 
 use FOS\OAuthServerBundle\Entity\Client as BaseClient;
 use Doctrine\ORM\Mapping as ORM;
@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Client
  *
  * @ORM\Table(name="lynx_oauth_client")
- * @ORM\Entity(repositoryClass="App\BootBundle\Repository\ClientRepository")
+ * @ORM\Entity(repositoryClass="App\ApiBundle\Repository\ClientRepository")
  */
 class Client extends BaseClient
 {
