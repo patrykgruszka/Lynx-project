@@ -2,29 +2,6 @@
 
 }
 
-header.kanban-header {
-  .header-title {
-    margin-top: 75px;
-    margin-bottom: 30px;
-    font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    font-weight: 700;
-  }
-
-  .header-brand-container {
-    text-align: right;
-  }
-
-  .header-brand {
-    display: block;
-    margin-left: auto;
-    height: 120px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-}
-
 header.kanban-group-header {
   @include bg-darken;
   padding: 12px 15px;
