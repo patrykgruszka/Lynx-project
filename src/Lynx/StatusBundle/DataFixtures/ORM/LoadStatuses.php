@@ -1,14 +1,14 @@
 <?php
 
-namespace Lynx\PriorityBundle\DataFixtures\ORM;
+namespace Lynx\StatusBundle\DataFixtures\ORM;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Lynx\PriorityBundle\Entity;
+use Lynx\StatusBundle\Entity;
 
-class LoadPriorities implements FixtureInterface, ContainerAwareInterface {
+class LoadStatuses implements FixtureInterface, ContainerAwareInterface {
 
   private $container;
 
@@ -19,21 +19,21 @@ class LoadPriorities implements FixtureInterface, ContainerAwareInterface {
   public function load( ObjectManager $manager ) {
     $priorities = [
         [
-            "name"        => "Minior",
+            "name"        => "To do",
             "description" => ""
         ],
         [
-            "name"        => "Major",
+            "name"        => "In progress",
             "description" => ""
         ],
         [
-            "name"        => "Critical",
+            "name"        => "Done",
             "description" => ""
         ]
     ];
 
     foreach ($priorities as $priority) {
-      $entity = new Entity\Priority();
+      $entity = new Entity\Status();
       $entity->setName($priority["name"]);
       $entity->setDescription($priority["description"]);
       $manager->persist( $entity );
