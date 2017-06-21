@@ -9,7 +9,7 @@
     </div>
 
     <div ng-hide="$ctrl.loading">
-        <table class="table table-striped" ng-show="$ctrl.projectsList">
+        <table class="table table-striped" ng-show="$ctrl.projectsList.length">
             <thead>
                 <tr>
                     <th>Id</th>
@@ -26,7 +26,7 @@
             </tbody>
         </table>
 
-        <div class="alert alert-info" ng-hide="$ctrl.projectsList">
+        <div class="alert alert-info" ng-hide="$ctrl.projectsList.length">
             There are no projects in database. Start now, and create your first project.
         </div>
 
