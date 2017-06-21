@@ -115,6 +115,12 @@ grunt
 
 ```
 
+#### Ładowanie inicjalizujących danych do bazy ####
+```
+php app/console doctrine:fixtures:load
+
+```
+
 ### Dodatkowe pomocne informacje ###
 Wszystkie polecenia można wykonać z poziomu Netbeans IDE poprzez PPM na projekcie w przypadku:
 *`php app/console` po wybraniu z menu `Symfony` polecenia `Run Command...`
