@@ -1,5 +1,5 @@
 angular.module('projectModule').component('addProject', {
-    templateUrl: '/app/project/components/addProject.html',
+    templateUrl: '/application/project/components/addProject.html',
     controller: function AddProjectController($scope, $http, $location) {
         var self = this;
 

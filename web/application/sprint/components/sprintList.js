@@ -1,5 +1,5 @@
 angular.module('sprintModule').component('sprintList', {
-    templateUrl: '/app/sprint/components/sprintList.html',
+    templateUrl: '/application/sprint/components/sprintList.html',
     controller: function SprintListController($http) {
         var self = this;
         self.sprintsList = [];

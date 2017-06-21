@@ -1,5 +1,5 @@
 angular.module('taskModule').component('addTask', {
-    templateUrl: '/app/task/components/addTask.html',
+    templateUrl: '/application/task/components/addTask.html',
     controller: function AddTaskController($scope, $http, $q, $location) {
         var self = this;
 

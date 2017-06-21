@@ -1,5 +1,5 @@
 angular.module('sprintModule').component('addSprint', {
-    templateUrl: '/app/sprint/components/addSprint.html',
+    templateUrl: '/application/sprint/components/addSprint.html',
     controller: function AddSprintController($scope, $http, $q, $location) {
         var self = this;
 

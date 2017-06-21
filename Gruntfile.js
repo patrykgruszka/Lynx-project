@@ -6,7 +6,7 @@ module.exports = function (grunt) {
         jshint: {
             scripts: [
                 '<%= manifest.path.source %>/scripts/**/*.js',
-                'web/app/**/*.js'
+                'web/application/**/*.js'
             ]
         },
         concat: {
@@ -21,9 +21,9 @@ module.exports = function (grunt) {
                     'node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
                     'node_modules/angular/angular.js',
                     'node_modules/angular-route/angular-route.js',
-                    'web/app/app.js',
-                    'web/app/*/*.module.js',
-                    'web/app/**/*.js',
+                    'web/application/app.js',
+                    'web/application/*/*.module.js',
+                    'web/application/**/*.js',
                     '<%= manifest.path.source %>/scripts/main.js'
                 ],
                 dest: '<%= manifest.path.dist %>/scripts/bundle.js',
@@ -70,7 +70,7 @@ module.exports = function (grunt) {
             scripts: {
                 files: [
                     '<%= manifest.path.source %>/scripts/**/*.js',
-                    'web/app/**/*.js'
+                    'web/application/**/*.js'
                 ],
                 tasks: ['jshint', 'concat:scripts']
             }

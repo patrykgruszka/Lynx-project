@@ -1,5 +1,5 @@
 angular.module('projectModule').component('projectList', {
-    templateUrl: '/app/project/components/projectList.html',
+    templateUrl: '/application/project/components/projectList.html',
     controller: function ProjectListController($http) {
         var self = this;
         self.projectsList = [];
