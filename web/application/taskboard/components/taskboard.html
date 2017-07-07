@@ -1,0 +1,48 @@
+<div class="taskboard-container">
+    <div ng-show="$ctrl.loading">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3 class="mv-none">Loading...</h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="kanban-board" class="kanban-board" ng-hide="$ctrl.loading">
+        <div class="row">
+            <div class="col-xs-4">
+                <header class="kanban-group-header">
+                    <h2 class="kanban-group-title">To do</h2>
+                </header>
+                <ul class="kanban-group todo-group">
+                    <li class="kanban-task" ng-repeat="task in $ctrl.toDoTasks">
+                        <h3 class="task-title">{{ task.name }}</h3>
+                        <p class="task-description">{{ task.description }}</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-4">
+                <header class="kanban-group-header">
+                    <h2 class="kanban-group-title">In progress</h2>
+                </header>
+                <ul class="kanban-group in-progress-group">
+                    <li class="kanban-task" ng-repeat="task in $ctrl.inProgressTasks">
+                        <h3 class="task-title">{{ task.name }}</h3>
+                        <p class="task-description">{{ task.description }}</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-4">
+                <header class="kanban-group-header">
+                    <h2 class="kanban-group-title">Done</h2>
+                </header>
+                <ul class="kanban-group done-group">
+                    <li class="kanban-task" ng-repeat="task in $ctrl.doneTasks">
+                        <h3 class="task-title">{{ task.name }}</h3>
+                        <p class="task-description">{{ task.description }}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
