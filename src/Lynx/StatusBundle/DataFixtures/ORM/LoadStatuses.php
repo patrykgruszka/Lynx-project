@@ -17,25 +17,29 @@ class LoadStatuses implements FixtureInterface, ContainerAwareInterface {
   }
 
   public function load( ObjectManager $manager ) {
-    $priorities = [
+    $statuses = [
         [
             "name"        => "To do",
+            "shortName" => "todo",
             "description" => ""
         ],
         [
             "name"        => "In progress",
+            "shortName" => "in-progress",
             "description" => ""
         ],
         [
             "name"        => "Done",
+            "shortName" => "done",
             "description" => ""
         ]
     ];
 
-    foreach ($priorities as $priority) {
+    foreach ($statuses as $status) {
       $entity = new Entity\Status();
-      $entity->setName($priority["name"]);
-      $entity->setDescription($priority["description"]);
+      $entity->setName($status["name"]);
+      $entity->setShortName($status["shortName"]);
+      $entity->setDescription($status["description"]);
       $manager->persist( $entity );
     }
 

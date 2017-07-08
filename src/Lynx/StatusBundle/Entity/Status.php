@@ -16,6 +16,11 @@ class Status {
     private $name;
 
     /**
+     * @ORM\Column(type="string", length=64)
+     */
+    private $shortName;
+
+    /**
      * @ORM\Column(type="string", length=300)
      */
     private $description;
@@ -35,6 +40,10 @@ class Status {
         return $this->name;
     }
 
+    public function getShortName() {
+        return $this->shortName;
+    }
+
     public function getDescription() {
         return $this->description;
     }
@@ -45,6 +54,10 @@ class Status {
 
     public function setName($name) {
         $this->name = $name;
+    }
+
+    public function setShortName($shortName) {
+        $this->shortName = $shortName;
     }
 
     public function setDescription($description) {
