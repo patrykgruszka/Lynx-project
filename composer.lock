@@ -9,16 +9,16 @@
     "packages": [
         {
             "name": "beberlei/DoctrineExtensions",
-            "version": "v1.0.16",
+            "version": "v1.0.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/beberlei/DoctrineExtensions.git",
-                "reference": "8a3ffc03ad14ca134d7479df44792a47256e0c11"
+                "reference": "608854d5979e21cd8290ddf03a92f55017f62c80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/beberlei/DoctrineExtensions/zipball/8a3ffc03ad14ca134d7479df44792a47256e0c11",
-                "reference": "8a3ffc03ad14ca134d7479df44792a47256e0c11",
+                "url": "https://api.github.com/repos/beberlei/DoctrineExtensions/zipball/608854d5979e21cd8290ddf03a92f55017f62c80",
+                "reference": "608854d5979e21cd8290ddf03a92f55017f62c80",
                 "shasum": ""
             },
             "require": {
@@ -67,7 +67,7 @@
                 "doctrine",
                 "orm"
             ],
-            "time": "2017-05-18 05:18:02"
+            "time": "2017-06-16 07:29:39"
         },
         {
             "name": "doctrine/annotations",
@@ -1649,16 +1649,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.22.1",
+            "version": "1.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "1e044bc4b34e91743943479f1be7a1d5eb93add0"
+                "reference": "fd8c787753b3a2ad11bc60c063cff1358a32a3b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1e044bc4b34e91743943479f1be7a1d5eb93add0",
-                "reference": "1e044bc4b34e91743943479f1be7a1d5eb93add0",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/fd8c787753b3a2ad11bc60c063cff1358a32a3b4",
+                "reference": "fd8c787753b3a2ad11bc60c063cff1358a32a3b4",
                 "shasum": ""
             },
             "require": {
@@ -1679,7 +1679,7 @@
                 "phpunit/phpunit-mock-objects": "2.3.0",
                 "ruflin/elastica": ">=0.90 <3.0",
                 "sentry/sentry": "^0.13",
-                "swiftmailer/swiftmailer": "~5.3"
+                "swiftmailer/swiftmailer": "^5.3|^6.0"
             },
             "suggest": {
                 "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
@@ -1723,7 +1723,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2017-03-13 07:08:03"
+            "time": "2017-06-19 01:22:40"
         },
         {
             "name": "paragonie/random_compat",
@@ -3142,16 +3142,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.34.3",
+            "version": "v1.34.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "451c6f4197e113e24c1c85bc3fc8c2d77adeff2e"
+                "reference": "f878bab48edb66ad9c6ed626bf817f60c6c096ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/451c6f4197e113e24c1c85bc3fc8c2d77adeff2e",
-                "reference": "451c6f4197e113e24c1c85bc3fc8c2d77adeff2e",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/f878bab48edb66ad9c6ed626bf817f60c6c096ee",
+                "reference": "f878bab48edb66ad9c6ed626bf817f60c6c096ee",
                 "shasum": ""
             },
             "require": {
@@ -3203,7 +3203,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-06-07 18:45:17"
+            "time": "2017-07-04 13:19:31"
         },
         {
             "name": "willdurand/jsonp-callback-validator",
@@ -3580,7 +3580,7 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v2.8.22",
+            "version": "v2.8.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
