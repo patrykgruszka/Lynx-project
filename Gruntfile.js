@@ -21,6 +21,7 @@ module.exports = function (grunt) {
                     'node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
                     'node_modules/angular/angular.js',
                     'node_modules/angular-route/angular-route.js',
+                    'node_modules/ng-sortable/dist/ng-sortable.js',
                     'web/application/app.js',
                     'web/application/*/*.module.js',
                     'web/application/**/*.js',

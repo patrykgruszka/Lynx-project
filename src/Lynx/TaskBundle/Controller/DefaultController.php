@@ -2,6 +2,7 @@
 
 namespace Lynx\TaskBundle\Controller;
 
+use Lynx\TaskBundle\LynxTaskBundle;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -18,10 +19,32 @@ class DefaultController extends Controller
         return $this->render('LynxTaskBundle:Default:index.html.twig');
     }
 
-    /**
+  /**
+   * @param $status
+   * @Route ("/getTasks/{status}", defaults={"status" = "todo"})
+   * @return Response
+   */
+    public function getTasks($status) {
+      $repository = $this->getDoctrine()
+                         ->getRepository('LynxTaskBundle:Task');
+
+      $query = $repository->createQueryBuilder('t')
+          ->innerJoin('t.status', 's')
+          ->where('s.shortName = :shortName')
+          ->setParameter('shortName', $status)
+          ->getQuery();
+
+      $tasks = $query->getResult();
+      $serializer = $this->get('jms_serializer');
+      $response = $serializer->serialize($tasks,'json');
+      return new Response($response);
+    }
+
+
+  /**
      * @Route("/getList")
      */
-      public function getList(){
+      public function getList(Request $request){
         $em = $this->getDoctrine()->getManager();
         $taskRepository = $em->getRepository('LynxTaskBundle:Task');
         $tasks = $taskRepository->findAll();

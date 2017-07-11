@@ -3,6 +3,6 @@
         <h2 class="kanban-group-title">{{ $ctrl.status.name }}</h2>
     </header>
     <ul class="kanban-group" ng-class="{'{{$ctrl.status.short_name}}-group': true}">
-        <kanban-task ng-repeat="task in $ctrl.tasks | filter: { status: {id: $ctrl.status.id}}" task="task"></kanban-task>
+        <kanban-task ng-repeat="task in $ctrl.tasks" task="task"></kanban-task>
     </ul>
 </div>
