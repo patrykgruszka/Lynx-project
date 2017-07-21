@@ -15,10 +15,14 @@ header.kanban-group-header {
   }
 }
 
-ul.kanban-group {
+div.kanban-list-container {
   @include  bg-darken;
+  margin: 0;
+  list-style: none;
+}
+
+ul.kanban-group {
   margin: 0;
   padding: 12px 15px;
   min-height: 300px;
-  list-style: none;
 }

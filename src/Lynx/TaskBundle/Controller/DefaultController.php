@@ -85,7 +85,31 @@ class DefaultController extends Controller
         return new Response();
       }
 
-    
-    
-    
+    /**
+     * @Route("/updateStatus")
+     */
+      public function updateStatus(Request $request)
+      {
+        $data = json_decode($request->getContent());
+        $em = $this->getDoctrine()->getManager();
+
+        $task = $em->getRepository('LynxTaskBundle:Task')->find($data->id);
+        if (!$task) {
+          throw $this->createNotFoundException(
+              'No task found for id '.$data->id
+          );
+        }
+
+        $status = $em->getRepository('LynxStatusBundle:Status')->findOneByShortName($data->status);
+        if (!$task) {
+          throw $this->createNotFoundException(
+              'No status found for name '.$$data->status
+          );
+        }
+        $task->setStatus($status);
+        $em->flush();
+
+        return new Response();
+      }
+
     }

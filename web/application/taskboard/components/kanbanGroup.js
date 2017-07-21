@@ -3,18 +3,27 @@ var KanbanGroupController = function($http) {
         var self = this;
         self.tasks = [];
 
+        self.dragControlListeners = {
+            itemMoved: self.onItemMove,
+            additionalPlaceholderClass: 'kanban-task-placeholder'
+        };
+
         $http.get('/task/getTasks/' + self.status.short_name).then(function(response) {
             self.tasks = response.data;
-
-            $("ul.kanban-group").sortable({
-                connectWith: "ul.kanban-group",
-                placeholder: "kanban-task-placeholder",
-                items: "li.kanban-task",
-                tolerance: "pointer",
-                cursor: "move",
-                dropOnEmpty: true
-            });
         });
+    };
+
+    this.onItemMove = function(event) {
+        var statusName = event.dest.sortableScope.element[0].getAttribute('data-name');
+        var model = event.dest.sortableScope.modelValue[0];
+
+        $http.post('/task/updateStatus', {
+            id: model.id,
+            status: statusName
+        }).then(function(response) {
+           console.log(response);
+        });
+        return true;
     };
 };
 

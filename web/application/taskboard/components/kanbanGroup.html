@@ -2,7 +2,13 @@
     <header class="kanban-group-header">
         <h2 class="kanban-group-title">{{ $ctrl.status.name }}</h2>
     </header>
-    <ul class="kanban-group" ng-class="{'{{$ctrl.status.short_name}}-group': true}">
-        <kanban-task ng-repeat="task in $ctrl.tasks" task="task"></kanban-task>
-    </ul>
+    <div class="kanban-list-container">
+        <ul class="kanban-group" ng-class="{'{{$ctrl.status.short_name}}-group': true}" data-as-sortable="$ctrl.dragControlListeners" data-ng-model="$ctrl.tasks" data-name="{{$ctrl.status.short_name}}">
+            <li class="kanban-task" ng-repeat="task in $ctrl.tasks" data-as-sortable-item>
+                <div class="task-handle" data-as-sortable-item-handle></div>
+                <h3 class="task-title">{{ task.name }}</h3>
+                <p class="task-description">{{ task.description }}</p>
+            </li>
+        </ul>
+    </div>
 </div>

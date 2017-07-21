@@ -1,4 +1,5 @@
 li.kanban-task {
+  position: relative;
   display: block;
   width: 100%;
   height: 100px;
@@ -6,6 +7,14 @@ li.kanban-task {
   background: #fff;
   border-left: 4px solid #888888;
   cursor: move;
+
+  .task-handle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
 
   .task-title {
     font-size: 16px;
