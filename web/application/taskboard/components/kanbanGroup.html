@@ -8,6 +8,11 @@
                 <div class="task-handle" data-as-sortable-item-handle></div>
                 <h3 class="task-title">{{ task.name }}</h3>
                 <p class="task-description">{{ task.description }}</p>
+                <p class="task-properties">
+                    Priority: <b>{{task.priority.name}}</b><br />
+                    Sprint: <b>{{task.sprint.name}}</b><br />
+                    Project: <b>{{task.project.name}}</b>
+                </p>
             </li>
         </ul>
     </div>
