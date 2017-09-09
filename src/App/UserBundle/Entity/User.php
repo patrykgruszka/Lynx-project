@@ -21,11 +21,50 @@ class User extends BaseUser
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
+	
+	/**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=255, unique=true)
+     */
+	protected $name;
+	
+	/**
+     * @var string
+     *
+     * @ORM\Column(name="lastname", type="string", length=255, unique=true)
+     */
+	protected $lastname;
 
     public function __construct()
     {
         parent::__construct();
         // your own logic
     }
+	
+	function getName()
+	{
+		return $this->name;
+	}
+
+	function getLastname()
+	{
+		return $this->lastname;
+	}
+
+	function setName($name)
+	{
+		$this->name = $name;
+		
+		return $this;
+	}
+
+	function setLastname($lastname)
+	{
+		$this->lastname = $lastname;
+		
+		return $this;
+	}
+
 }
 
