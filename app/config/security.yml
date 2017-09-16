@@ -27,7 +27,7 @@ security:
                 login_path: /oauth/v2/auth_login
             anonymous: true
         dev:
-            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            pattern: ^/(_(profiler|wdt)|css|images|js|assets)/
             security: false
 
         api:
