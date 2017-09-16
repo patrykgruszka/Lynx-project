@@ -190,4 +190,4 @@ fos_rest:
             'Symfony\Component\Routing\Exception\ResourceNotFoundException': 404
             'Doctrine\ORM\OptimisticLockException': HTTP_CONFLICT
         messages:
-            'Symfony\Component\Routing\Exception\ResourceNotFoundException': true      
+            'Symfony\Component\Routing\Exception\ResourceNotFoundException': true

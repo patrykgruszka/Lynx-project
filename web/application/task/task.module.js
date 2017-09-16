@@ -1,1 +1,1 @@
-var projectModule = angular.module('taskModule', ['ngRoute']);
+var taskModule = angular.module('taskModule', ['ngRoute']);

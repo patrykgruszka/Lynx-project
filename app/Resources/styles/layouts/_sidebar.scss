@@ -24,26 +24,100 @@ ul.sidebar-nav-list {
     }
 
     &.active {
-      a.nav-link {
-        background: $brand-primary;
+      > a.nav-link {
+        background: $brand-primary !important;
+      }
+    }
+
+    > a.nav-link {
+      display: block;
+      padding: 20px 10px;
+      font-size: 16px;
+      color: #fff;
+      transition: background 0.3s ease;
+
+      &:hover {
+        text-decoration: none;
+        background: rgba(#fff, 0.1);
+      }
+
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+ul.sidebar-submenu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: rgba(0, 0, 0, 0.3);
+
+  > li {
+    position: relative;
+    border-bottom: 1px solid rgba(#fff, 0.1);
+
+    &.active {
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 11px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 8px 6px 0;
+        border-color: transparent #fff transparent transparent;
+      }
+    }
+
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    > a.nav-link {
+      display: block;
+      padding: 7px 10px 7px 30px;
+      font-size: 14px;
+      color: #fff;
+      transition: background 0.3s ease;
+
+      &:hover {
+        text-decoration: none;
+        background: rgba(#fff, 0.1);
+      }
+
+      &:focus {
+        text-decoration: none;
       }
     }
   }
 
-  a.nav-link {
-    display: block;
-    padding: 20px 10px;
-    font-size: 16px;
-    color: #fff;
-    transition: background 0.3s ease;
+}
 
-    &:hover {
-      text-decoration: none;
-      background: rgba(#fff, 0.1);
-    }
+.sidebar-user-section {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.sidebar-logout-link {
+  display: block;
+  padding: 7px 10px;
+  font-size: 14px;
+  color: #fff;
+  transition: background 0.3s ease;
 
-    &:focus {
-      text-decoration: none;
-    }
+  &:hover {
+    text-decoration: none;
+    background: rgba(#fff, 0.1);
+  }
+
+  &:focus {
+    text-decoration: none;
   }
 }

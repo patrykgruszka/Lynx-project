@@ -22,6 +22,7 @@ module.exports = function (grunt) {
                     'node_modules/angular/angular.js',
                     'node_modules/angular-route/angular-route.js',
                     'node_modules/ng-sortable/dist/ng-sortable.js',
+                    'node_modules/ng-alertify/dist/ng-alertify.js',
                     'web/application/app.js',
                     'web/application/*/*.module.js',
                     'web/application/**/*.js',

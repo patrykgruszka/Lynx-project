@@ -1,5 +1,5 @@
 <div class="app-sidebar-wrapper">
-    <nav class="app-sidebar">
+    <nav id="app-sidebar" class="app-sidebar">
         <ul class="sidebar-nav-list">
             <li{% if app.request.get('_route') == 'lynx_taskboard_default_index' %} class="active"{% endif %}>
                 <a href="{{ path('lynx_taskboard_default_index') }}" class="nav-link">Taskboard</a>
@@ -15,7 +15,19 @@
             </li>
             <li{% if app.request.get('_route') == 'lynx_userpanel_default_index' %} class="active"{% endif %}>
                 <a href="{{ path('lynx_userpanel_default_index') }}" class="nav-link">User panel</a>
+
+                {% if app.request.get('_route') == 'lynx_userpanel_default_index' %}
+                    <ul class="sidebar-submenu">
+                        <li class="userpanel--profile"><a href="{{ path('lynx_userpanel_default_index') }}#!/profile" class="nav-link">Profile</a></li>
+                        <li class="userpanel--team"><a href="{{ path('lynx_userpanel_default_index') }}#!/team" class="nav-link">Team</a></li>
+                        <li class="userpanel--add-user"><a href="{{ path('lynx_userpanel_default_index') }}#!/add-user" class="nav-link">Add user</a></li>
+                    </ul>
+                {% endif %}
             </li>
         </ul>
+
+        <div class="sidebar-user-section">
+            <a href="/logout" class="sidebar-logout-link">Logout</a>
+        </div>
     </nav>
 </div>

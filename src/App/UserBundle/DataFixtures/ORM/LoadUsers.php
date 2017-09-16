@@ -1,7 +1,5 @@
 <?php
 
-//src/Example/UserBundle/DataFixtures/ORM/LoadUsers.php
-
 namespace App\UserBundle\DataFixtures\ORM;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
@@ -24,6 +22,8 @@ class LoadUsers implements FixtureInterface, ContainerAwareInterface {
         $encoder = $this->container->get('security.password_encoder');
         $encoded = $encoder->encodePassword($user, $password);
         $user->setUsername('admin');
+        $user->setName('John');
+        $user->setLastname('Admin');
         $user->setPassword($encoded);
         $user->setEmail('admin@example.com');
 		$user->setRoles(array('ROLE_PROJECT_MASTER'));

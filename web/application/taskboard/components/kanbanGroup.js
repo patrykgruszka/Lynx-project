@@ -16,7 +16,6 @@ var KanbanGroupController = function($http) {
     this.onItemMove = function(event, d) {
         var statusName = event.dest.sortableScope.element[0].getAttribute('data-name');
         var model = event.source.itemScope.task;
-        console.log(model, event, d);
 
         $http.post('/task/updateStatus', {
             id: model.id,

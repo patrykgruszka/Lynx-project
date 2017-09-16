@@ -11,6 +11,7 @@
 @import "components/buttons";
 @import "components/forms";
 @import "components/sortable";
+@import "components/ng-alertify";
 
 /* ==========================================================================
    Layout styles
@@ -24,3 +25,4 @@
 
 @import "layouts/kanban-board";
 @import "layouts/kanban-task";
+@import "layouts/userpanel";

@@ -17,3 +17,12 @@ angular.module('taskboardModule').component('taskboard', {
     templateUrl: '/application/taskboard/components/taskboard.html',
     controller: TaskboardController
 });
+
+angular.module('taskboardModule').component('appHeader', {
+    templateUrl: '/application/layout/components/appHeader.html',
+    controller: function AppHeaderController() {},
+    bindings: {
+        title: '@',
+        subtitle: '@'
+    }
+});

@@ -6,6 +6,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Serializer\Serializer;
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Doctrine\ORM\Query\ResultSetMapping;
 use Lynx\UserpanelBundle\Entity\Invite;
 use App\UserBundle\Entity\User;
@@ -20,44 +24,99 @@ class DefaultController extends Controller
 		$user = $this->getDoctrine()->getRepository("AppUserBundle:User")->find($this->getUser()->getId());
         return $this->render('LynxUserpanelBundle:Default:index.html.twig', array("user"=>$user));
     }
-	
+
+
 	/**
-     * @Route("/saveData")
+     * @Route("/updateProfile")
      */
-    public function saveDataAction(Request $request)
+    public function updateProfile(Request $request)
     {
-		$data = $request->request->all();
+        $data = json_decode($request->getContent());
 		$em = $this->getDoctrine()->getEntityManager();
 		$user = $this->getDoctrine()->getRepository("AppUserBundle:User")->find($this->getUser()->getId());
-		$user = new User();
-		$user->setName($data["name"]);
-		$user->setLastname($data["lastname"]);
+
+		$user->setName($data->name);
+		$user->setLastname($data->lastname);
+		$user->setEmail($data->email);
+		$user->setUsername($data->username);
 		$em->persist($user);
 		$em->flush();
-		return new JsonResponse(array("status"=>"success"));
-    }
-	
-	/**
-     * @Route("/coworkerList")
-     */
-	public function coworkerListAction()
-	{
-		$em = $this->getDoctrine()->getEntityManager();
-		$rsm = new ResultSetMapping();
-		
-		$query = $em->createNativeQuery('
-				SELECT lu.name as name, lu.lastname as lastname, lu.username as username, lu.email as email, 1 as accepted FROM lynx_user as lu WHERE user_id != ?
-				UNION
-				SELECT null as name, null as lastname, null as username, li.email as email, 0 as accepted FROM lynx_invite as li'
-		, $rsm);
-		
-		$query->setParameter(1, $this->getUser()->getId());
 
-		$list = $query->getArrayResult();
-		
-		return new JsonResponse($list);
-	}
-	
+        $serializer = $this->get('jms_serializer');
+        $response = $serializer->serialize(array(
+            "status" => "success",
+            "msg" => "User data was successfully updated"
+        ), 'json');
+
+        return new Response($response);
+    }
+
+    /**
+     * @Route("/getProfile")
+     */
+    public function getProfile() {
+        $user = $this->getDoctrine()->getRepository("AppUserBundle:User")->find($this->getUser()->getId());
+
+        $normalizer = new ObjectNormalizer();
+        $normalizer->setIgnoredAttributes(['salt', 'password', 'plainPassword', 'timezone', 'emailCanonical', 'confirmationToken']);
+        $encoder = new JsonEncoder();
+        $serializer = new Serializer(array($normalizer), array($encoder));
+        $response = $serializer->serialize($user, 'json');
+        return new Response($response);
+    }
+
+    /**
+     * @Route("/getUsers")
+     */
+    public function getUsers() {
+        $userManager = $this->get('fos_user.user_manager');
+        $users = $userManager->findUsers();
+
+        $normalizer = new ObjectNormalizer();
+        $normalizer->setIgnoredAttributes(['salt', 'password', 'plainPassword', 'timezone', 'emailCanonical', 'confirmationToken']);
+        $encoder = new JsonEncoder();
+        $serializer = new Serializer(array($normalizer), array($encoder));
+        $response = $serializer->serialize($users, 'json');
+
+        return new Response($response);
+    }
+
+    /**
+     * @Route("/addUser")
+     */
+    public function addUser(Request $request)
+    {
+        $data = json_decode($request->getContent());
+        $em = $this->getDoctrine()->getEntityManager();
+
+        $user = new User();
+        $password = $data->password;
+        $encoder = $this->container->get('security.password_encoder');
+        $encoded = $encoder->encodePassword($user, $password);
+        $user->setUsername($data->username);
+        $user->setName($data->name);
+        $user->setLastname($data->lastname);
+        $user->setPassword($encoded);
+        $user->setEmail($data->email);
+        if ($data->role == 'ROLE_PROJECT_MASTER') {
+            $user->setRoles(['ROLE_PROJECT_MASTER', 'ROLE_USER']);
+        } else {
+            $user->setRoles(['ROLE_USER']);
+        }
+        $user->setEnabled($data->enabled);
+
+        $em->persist($user);
+        $em->flush();
+
+        $serializer = $this->get('jms_serializer');
+        $response = $serializer->serialize(array(
+            "status" => "success",
+            "msg" => "User was successfully created"
+        ), 'json');
+
+        return new Response($response);
+    }
+
 	/**
      * @Route("/sendInvitation")
      */

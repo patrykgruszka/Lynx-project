@@ -16,8 +16,6 @@
     {% include 'sections/sidebar.html.twig' %}
     <div class="app-content-wrapper">
         <div class="app-content">
-            {% include 'sections/header.html.twig' with {pageTitle: block('pageTitle')} %}
-
             {% block body %}{% endblock %}
         </div>
     </div>

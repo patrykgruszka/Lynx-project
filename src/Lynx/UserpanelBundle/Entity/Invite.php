@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Invite
  *
- * @ORM\Table(name="invite")
+ * @ORM\Table(name="lynx_invite")
  * @ORM\Entity(repositoryClass="Lynx\UserpanelBundle\Repository\InviteRepository")
  */
 class Invite

@@ -5,7 +5,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="task")
+ * @ORM\Table(name="lynx_task")
  */
 
 
