@@ -16,6 +16,7 @@
                 <th>Name</th>
                 <th>Description</th>
                 <th>Project</th>
+                <th>Actions</th>
             </tr>
             </thead>
             <tbody>
@@ -24,6 +25,7 @@
                 <td>{{sprint.name}}</td>
                 <td>{{sprint.description}}</td>
                 <td>{{sprint.project.name}}</td>
+                <td><a href="/app_dev.php/taskboard/#!/project/{{sprint.project.id}}/sprint/{{sprint.id}}">Taskboard</a></td>
             </tr>
             </tbody>
         </table>

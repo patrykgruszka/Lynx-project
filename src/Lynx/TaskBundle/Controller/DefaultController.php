@@ -37,21 +37,31 @@ class DefaultController extends Controller
 
 
     /**
+     * @Route ("/getTasks/{status}/{projectId}/{sprintId}")
      * @param $status
-     * @Route ("/getTasks/{status}", defaults={"status" = "todo"})
+     * @param bool $projectId
+     * @param bool $sprintId
      * @return Response
      */
-    public function getTasks($status)
+    public function getTasks($status, $projectId = false, $sprintId = false)
     {
         $repository = $this->getDoctrine()
             ->getRepository('LynxTaskBundle:Task');
 
-        $query = $repository->createQueryBuilder('t')
+        $queryBuilder = $repository->createQueryBuilder('t')
             ->innerJoin('t.status', 's')
+            ->innerJoin('t.project', 'p')
+            ->innerJoin('t.sprint', 'sp')
             ->where('s.shortName = :shortName')
-            ->setParameter('shortName', $status)
-            ->getQuery();
+            ->andWhere('p.id = :projectId')
+            ->andWhere('sp.id = :sprintId')
+            ->setParameters([
+                'shortName' => $status,
+                'projectId' => $projectId,
+                'sprintId' => $sprintId
+            ]);
 
+        $query = $queryBuilder->getQuery();
         $tasks = $query->getResult();
         $serializer = $this->get('jms_serializer');
         $response = $serializer->serialize($tasks, 'json');
@@ -144,7 +154,12 @@ class DefaultController extends Controller
         $task->setStatus($status);
         $em->flush();
 
-        return new Response();
+        $serializer = $this->get('jms_serializer');
+        $response = $serializer->serialize(array(
+            "status" => "success",
+            "msg" => "Task status successfully updated"
+        ), 'json');
+        return new Response($response);
     }
 
     /**

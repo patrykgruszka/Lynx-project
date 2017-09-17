@@ -20,84 +20,53 @@ class DefaultController extends Controller
         return $this->render('LynxProjectBundle:Default:index.html.twig');
     }
 
+    /**
+     * @param $id
+     * @Route ("/getProject/{id}")
+     * @return Response
+     */
+    public function getProject($id)
+    {
+        $repository = $this->getDoctrine()
+            ->getRepository('LynxProjectBundle:Project');
+        $task = $repository->find($id);
 
-
+        $serializer = $this->get('jms_serializer');
+        $response = $serializer->serialize($task, 'json');
+        return new Response($response);
+    }
 
     /**
      * @Route("/getList")
      */
-  public function getList(){
-    $em = $this->getDoctrine()->getManager();
-    $projectRepository = $em->getRepository('LynxProjectBundle:Project');
-    $projects = $projectRepository->findAll();
+    public function getList()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $projectRepository = $em->getRepository('LynxProjectBundle:Project');
+        $projects = $projectRepository->findAll();
 
-    $serializer = $this->get('jms_serializer');
-    $response = $serializer->serialize($projects,'json');
+        $serializer = $this->get('jms_serializer');
+        $response = $serializer->serialize($projects, 'json');
 
-    return new Response($response);
-  }
+        return new Response($response);
+    }
+
 
     /**
-     * Creates a new Post entity.
-     *
-     * @Route("/new", name="admin_post_new")
-     *
-     * NOTE: the Method annotation is optional, but it's a recommended practice
-     * to constraint the HTTP methods each controller responds to (by default
-     * it responds to all methods).
+     * @Route("/save")
      */
-    public function newAction(Request $request)
+    public function saveAction(Request $request)
     {
-        $user = new User();
-        //$post->setAuthor($this->getUser());
-        $user->setName($request->request->get('name'));
-        $user->setLastname($request->request->get('lastname'));
-        $user->setType($request->request->get('type'));
-        // See http://symfony.com/doc/current/book/forms.html#submitting-forms-with-multiple-buttons
-        /*/*$form = $this->createForm(PostType::class, $post)
-            ->add('saveAndCreateNew', SubmitType::class);
+        $data = json_decode($request->getContent());
+        $project = new Project();
+        $project->setName($data->name);
+        $project->setDescription($data->description);
 
-        $form->handleRequest($request);
-*/
-        // the isSubmitted() method is completely optional because the other
-        // isValid() method already checks whether the form is submitted.
-        // However, we explicitly add it to improve code readability.
-        // See http://symfony.com/doc/current/best_practices/forms.html#handling-form-submits
- //       if ($form->isSubmitted() && $form->isValid()) {
- //           $post->setSlug($this->get('slugger')->slugify($post->getTitle()));
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->persist($project);
+        $entityManager->flush();
 
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($user);
-            $entityManager->flush();
-
-            // Flash messages are used to notify the user about the result of the
-            // actions. They are deleted automatically from the session as soon
-            // as they are accessed.
-            // See http://symfony.com/doc/current/book/controller.html#flash-messages
-            $this->addFlash('success', 'post.created_successfully');
-            return $this->redirectToRoute('users');
-//            return new Response('Created user '.$user->getName());
-        }
-
-
-  /**
-   * @Route("/save")
-   */
-  public function saveAction(Request $request)
-  {
-    $data = json_decode($request->getContent());
-
-
-    $project = new Project();
-    $project->setName($data->name);
-    $project->setDescription($data->description);
-
-    $entityManager = $this->getDoctrine()->getManager();
-    $entityManager->persist($project);
-    $entityManager->flush();
-
-    return new Response();
-  }
-
+        return new Response();
+    }
 
 }

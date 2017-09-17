@@ -1,8 +1,12 @@
 angular.module('taskboardModule')
     .config(['$locationProvider', '$routeProvider',
         function config($locationProvider, $routeProvider) {
-            $routeProvider.when('/', {
-                template: '<app-header title="Taskboard"></app-header><taskboard></taskboard>'
-            }).otherwise('/');
+            $routeProvider.when('/choose-sprint', {
+                template: '<choose-sprint></choose-sprint>'
+            }).when('/project/:projectId/sprint/:sprintId', {
+                template: function (params) {
+                    return '<taskboard project-id="' + params.projectId + '" sprint-id="' + params.sprintId + '"></taskboard>';
+                }
+            }).otherwise('/choose-sprint');
         }
     ]);

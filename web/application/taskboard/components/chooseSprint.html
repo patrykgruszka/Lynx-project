@@ -1,0 +1,48 @@
+<app-header title="Choose sprint" subtitle="to view taskboard"></app-header>
+
+<div class="taskboard-choose-sprint-container">
+
+    <div ng-show="$ctrl.loading">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3 class="mv-none">Loading...</h3>
+            </div>
+        </div>
+    </div>
+
+    <div ng-hide="$ctrl.loading">
+        <div class="row">
+            <div class="col-xs-12 col-md-4" ng-repeat="sprint in $ctrl.sprintsList">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h3 class="h4 mt-none mb-none">{{sprint.name}}</h3></div>
+                    <div class="panel-body">
+                        <ul class="property-list">
+                            <li class="item">
+                                <div class="wrapper">
+                                    <span class="name">Sprint Id</span>
+                                    <span class="value">{{sprint.id}}</span>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div class="wrapper">
+                                    <span class="name">Project</span>
+                                    <span class="value">{{sprint.project.name}}</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="button-wrapper text-right">
+                            <a href="#!/project/{{sprint.project.id}}/sprint/{{sprint.id}}" class="btn btn-sm btn-primary">Show taskboard</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert alert-info" ng-hide="$ctrl.sprintsList.length">
+            There are no sprints in database. Start now, and add your first sprint.
+        </div>
+
+        <a href="/sprint#!/add" class="btn btn-success">Add new sprint</a>
+    </div>
+</div>

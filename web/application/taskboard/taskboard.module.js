@@ -1,1 +1,1 @@
-var taskboardModule = angular.module('taskboardModule', ['ngRoute']);
+var taskboardModule = angular.module('taskboardModule', ['ngRoute', 'as.sortable']);

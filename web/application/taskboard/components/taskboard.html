@@ -1,3 +1,5 @@
+<app-header title="{{$ctrl.project.name}} Taskboard" subtitle="{{$ctrl.sprint.name}}"></app-header>
+
 <div class="taskboard-container">
     <div ng-show="$ctrl.loading">
         <div class="panel panel-default">
@@ -9,8 +11,11 @@
 
     <div id="kanban-board" class="kanban-board" ng-hide="$ctrl.loading">
         <div class="row">
-            <kanban-group ng-repeat="status in $ctrl.statuses" status="status"></kanban-group>
+            <kanban-group ng-repeat="status in $ctrl.statuses" status="status" project-id="{{$ctrl.projectId}}" sprint-id="{{$ctrl.sprintId}}"></kanban-group>
         </div>
     </div>
 
+    <div class="button-wrapper mt-md">
+        <a href="#!/choose-sprint" class="btn btn-default">Change sprint</a>
+    </div>
 </div>

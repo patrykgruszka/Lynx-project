@@ -1,0 +1,80 @@
+.property-list {
+  display: block;
+  margin: 0 0 15px;
+  list-style: none;
+  padding: 0;
+  clear: both;
+
+  > li {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    clear: left;
+
+    + li {
+      margin-top: 5px;
+      @media(min-width: 768px) {
+        margin-top: 1px;
+      }
+    }
+
+    .name {
+      display: block;
+      color: #777777;
+
+      @media(min-width: 768px) {
+        box-sizing: border-box;
+        word-wrap: break-word;
+        display: inline-block;
+        font-weight: normal;
+        padding: 2px 5px 2px 0;
+        text-align: left;
+        width: 140px;
+      }
+    }
+
+    .value {
+      display: block;
+
+      @media(min-width: 768px) {
+        word-wrap: break-word;
+        display: inline-block;
+        max-width: 100%;
+        padding-bottom: 2px;
+        padding-left: 5px;
+        padding-top: 2px;
+        position: relative;
+        vertical-align: top;
+      }
+    }
+  }
+
+  .wrapper {
+    @media(min-width: 768px) {
+      padding: 0 10px 0 140px;
+      .name {
+        float: left;
+        margin-left: -140px;
+      }
+    }
+  }
+
+  @media(min-width: 480px) {
+    &.two-cols {
+      > .item {
+        box-sizing: border-box;
+        clear: left;
+        float: left;
+        width: 50%;
+      }
+      > .right-item {
+        clear: right;
+        float: right;
+      }
+      > .full-width-item {
+        clear: both;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -25,6 +25,7 @@ module.exports = function (grunt) {
                     'node_modules/ng-alertify/dist/ng-alertify.js',
                     'web/application/app.js',
                     'web/application/*/*.module.js',
+                    'web/application/*/*.config.js',
                     'web/application/**/*.js',
                     '<%= manifest.path.source %>/scripts/main.js'
                 ],
@@ -75,6 +76,12 @@ module.exports = function (grunt) {
                     'web/application/**/*.js'
                 ],
                 tasks: ['jshint', 'concat:scripts']
+            },
+            templates: {
+                files:[
+                    'web/application/**/*.html'
+                ],
+                tasks: []
             }
         },
         clean: {

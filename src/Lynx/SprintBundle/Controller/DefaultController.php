@@ -17,39 +17,56 @@ class DefaultController extends Controller
     {
         return $this->render('LynxSprintBundle:Default:index.html.twig');
     }
-    
-        /**
+
+    /**
+     * @param $id
+     * @Route ("/getSprint/{id}")
+     * @return Response
+     */
+    public function getSprint($id)
+    {
+        $repository = $this->getDoctrine()
+            ->getRepository('LynxSprintBundle:Sprint');
+        $task = $repository->find($id);
+
+        $serializer = $this->get('jms_serializer');
+        $response = $serializer->serialize($task, 'json');
+        return new Response($response);
+    }
+
+    /**
      * @Route("/getList")
      */
-    public function getList(){
-      $em = $this->getDoctrine()->getManager();
-      $sprintRepository = $em->getRepository('LynxSprintBundle:Sprint');
-      $sprints = $sprintRepository->findAll();
+    public function getList()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $sprintRepository = $em->getRepository('LynxSprintBundle:Sprint');
+        $sprints = $sprintRepository->findAll();
 
-      $serializer = $this->get('jms_serializer');
-      $response = $serializer->serialize($sprints,'json');
+        $serializer = $this->get('jms_serializer');
+        $response = $serializer->serialize($sprints, 'json');
 
-      return new Response($response);
+        return new Response($response);
     }
-    
-   /**
-   * @Route("/save")
-   */
-  public function saveAction(Request $request)
-  {
-    $data = json_decode($request->getContent());
-    $em = $this->getDoctrine()->getManager();
-    $project = $em->getRepository('LynxProjectBundle:Project')->findOneByName($data->project);
 
-    $sprint = new Sprint();
-    $sprint->setName($data->name);
-    $sprint->setDescription($data->description);
-    $sprint->setProject($project);
-    
-    $entityManager = $this->getDoctrine()->getManager();
-    $entityManager->persist($sprint);
-    $entityManager->flush();
+    /**
+     * @Route("/save")
+     */
+    public function saveAction(Request $request)
+    {
+        $data = json_decode($request->getContent());
+        $em = $this->getDoctrine()->getManager();
+        $project = $em->getRepository('LynxProjectBundle:Project')->findOneByName($data->project);
 
-    return new Response();
-  }
+        $sprint = new Sprint();
+        $sprint->setName($data->name);
+        $sprint->setDescription($data->description);
+        $sprint->setProject($project);
+
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->persist($sprint);
+        $entityManager->flush();
+
+        return new Response();
+    }
 }
