@@ -24,7 +24,7 @@ angular.module('lynxModule').component('addSprint', {
                 $window.alertify.error('Select project first');
             } else {
                 $http.post('/sprint/save', JSON.stringify(self.formData)).then(function(){
-                    $location.path('/list');
+                    $location.path('/sprint');
                 });
             }
         };

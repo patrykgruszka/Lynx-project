@@ -33,6 +33,16 @@ li.kanban-task {
     margin-bottom: 0;
   }
 
+  .task-controls {
+    margin-top: 5px;
+    a,
+    button {
+      display: inline-block;
+      position: relative;
+      z-index: 5;
+    }
+  }
+
   .in-progress-group & {
     border-left-color: $brand-warning;
   }

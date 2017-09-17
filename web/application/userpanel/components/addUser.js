@@ -16,11 +16,10 @@ angular.module('lynxModule').component('addUser', {
         };
 
         self.submitForm = function() {
-            console.log(JSON.stringify(self.user));
             if (self.user.password === self.user.passwordRepeat) {
                 $http.post('/userpanel/addUser', JSON.stringify(self.user)).then(function(response){
                     $window.alertify.success(response.data.msg);
-                    $location.path('/userpanel/team');
+                    $location.path('/userpanel');
                 });
             } else {
                 $window.alertify.error('Password does not match confirmation');

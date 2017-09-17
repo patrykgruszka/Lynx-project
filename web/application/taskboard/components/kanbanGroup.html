@@ -2,6 +2,7 @@
     <header class="kanban-group-header">
         <h2 class="kanban-group-title">{{ $ctrl.status.name }}</h2>
     </header>
+
     <div class="kanban-list-container">
         <ul class="kanban-group" ng-class="{'{{$ctrl.status.short_name}}-group': true}" data-as-sortable="$ctrl.dragControlListeners" data-ng-model="$ctrl.tasks" data-name="{{$ctrl.status.short_name}}">
             <li class="kanban-task" ng-repeat="task in $ctrl.tasks" data-as-sortable-item>
@@ -9,10 +10,11 @@
                 <h3 class="task-title">{{ task.name }}</h3>
                 <p class="task-properties">
                     Priority: <span class="priority-label" data-priority="{{task.priority.name|lowercase}}">{{task.priority.name}}</span><br />
-                    Sprint: <b>{{task.sprint.name}}</b><br />
-                    Assignee: <b>{{task.assignee.name}} {{task.assignee.lastname}}</b><br />
-                    Project: <b>{{task.project.name}}</b>
+                    Assignee: <b>{{task.assignee.name}} {{task.assignee.lastname}}</b>
                 </p>
+                <div class="task-controls">
+                    <a href="#!/task/{{task.id}}/edit" class="btn btn-xs btn-default">Edit</a>
+                </div>
             </li>
         </ul>
     </div>
