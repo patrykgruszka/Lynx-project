@@ -1,4 +1,4 @@
-angular.module('userpanelModule').component('userList', {
+angular.module('lynxModule').component('userList', {
     templateUrl: '/application/userpanel/components/userList.html',
     controller: function UserListController($http, $window) {
         var self = this;
@@ -9,7 +9,5 @@ angular.module('userpanelModule').component('userList', {
             self.usersList = response.data;
             self.loading = false;
         });
-
-        $window.sidebar.activate('userpanel--team');
     }
 });

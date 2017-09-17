@@ -1,4 +1,4 @@
-angular.module('taskModule').component('taskList', {
+angular.module('lynxModule').component('taskList', {
     templateUrl: '/application/task/components/taskList.html',
     controller: function TaskListController($http, $window) {
         var self = this;

@@ -1,1 +1,0 @@
-var userpanelModule = angular.module('userpanelModule', ['ngRoute']);

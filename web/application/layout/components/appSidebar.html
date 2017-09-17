@@ -1,0 +1,60 @@
+<div class="app-sidebar-wrapper">
+    <nav id="app-sidebar" class="app-sidebar">
+        <ul class="sidebar-nav-list">
+            <li ng-class="{active: $ctrl.pathContains('/taskboard')}">
+                <a href="#!/taskboard" class="nav-link">Taskboard</a>
+            </li>
+            <li ng-class="{active: $ctrl.pathContains('/project') && !$ctrl.pathContains('/taskboard')}">
+                <a href="#!/project" class="nav-link">Projects</a>
+                <ul class="sidebar-submenu" ng-show="$ctrl.pathContains('/project') && !$ctrl.pathContains('/taskboard')">
+                    <li ng-class="{active: $ctrl.pathEquals('/project')}">
+                        <a href="#!/project" class="nav-link">List</a>
+                    </li>
+                    <li ng-class="{active: $ctrl.pathEquals('/project/add')}">
+                        <a href="#!/project/add" class="nav-link">Add project</a>
+                    </li>
+                </ul>
+            </li>
+            <li ng-class="{active: $ctrl.pathContains('/sprint') && !$ctrl.pathContains('/taskboard')}">
+                <a href="#!/sprint" class="nav-link">Sprints</a>
+                <ul class="sidebar-submenu" ng-show="$ctrl.pathContains('/sprint') && !$ctrl.pathContains('/taskboard')">
+                    <li ng-class="{active: $ctrl.pathEquals('/sprint')}">
+                        <a href="#!/sprint" class="nav-link">List</a>
+                    </li>
+                    <li ng-class="{active: $ctrl.pathEquals('/sprint/add')}">
+                        <a href="#!/sprint/add" class="nav-link">Add sprint</a>
+                    </li>
+                </ul>
+            </li>
+            <li ng-class="{active: $ctrl.pathContains('/task') && !$ctrl.pathContains('/taskboard')}">
+                <a href="#!/task" class="nav-link">Tasks</a>
+                <ul class="sidebar-submenu" ng-show="$ctrl.pathContains('/task') && !$ctrl.pathContains('/taskboard')">
+                    <li ng-class="{active: $ctrl.pathEquals('/task')}">
+                        <a href="#!/task" class="nav-link">List</a>
+                    </li>
+                    <li ng-class="{active: $ctrl.pathEquals('/task/add')}">
+                        <a href="#!/task/add" class="nav-link">Add task</a>
+                    </li>
+                </ul>
+            </li>
+            <li ng-class="{active: $ctrl.pathContains('/userpanel')}">
+                <a href="#!/userpanel" class="nav-link">User panel</a>
+                <ul class="sidebar-submenu" ng-show="$ctrl.pathContains('/userpanel')">
+                    <li ng-class="{active: $ctrl.pathEquals('/userpanel')}">
+                        <a href="#!/userpanel" class="nav-link">Team</a>
+                    </li>
+                    <li ng-class="{active: $ctrl.pathContains('/userpanel/profile')}">
+                        <a href="#!/userpanel/profile" class="nav-link">Profile</a>
+                    </li>
+                    <li ng-class="{active: $ctrl.pathContains('/userpanel/add-user')}">
+                        <a href="#!/userpanel/add-user" class="nav-link">Add user</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="sidebar-user-section">
+            <a href="/logout" class="sidebar-logout-link">Logout</a>
+        </div>
+    </nav>
+</div>

@@ -1,4 +1,4 @@
-angular.module('taskboardModule').component('taskboard', {
+angular.module('lynxModule').component('taskboard', {
     templateUrl: '/application/taskboard/components/taskboard.html',
     controller: function TaskboardController($http, $q) {
         var self = this;

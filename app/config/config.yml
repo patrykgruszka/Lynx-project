@@ -2,6 +2,7 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
+    - { resource: "@LynxAppBundle/Resources/config/services.yml" }
     - { resource: "@AppApiBundle/Resources/config/services.yml" }
     - { resource: "@AppManagerBundle/Resources/config/services.yml" }
     - { resource: "@AppUserBundle/Resources/config/services.yml" }

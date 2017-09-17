@@ -67,8 +67,6 @@
                 <textarea id="task-description-input" ng-model="$ctrl.formData.description" class="form-control" rows="3" placeholder="Goals and objectives of the task"></textarea>
             </div>
 
-
-
             <div class="form-group">
                 <label for="sprint-select">Select sprint from list</label>
                 <select id="sprint-select" class="form-control"
@@ -80,7 +78,7 @@
             </div>
 
             <div class="button-wrapper mt-sm">
-                <a href="#!/list" class="btn btn-primary">Back to list</a>
+                <a href="#!/task" class="btn btn-primary">Back to list</a>
                 <button type="submit" class="btn btn-success" ng-show="$ctrl.isNew">Create task</button>
                 <button type="submit" class="btn btn-success" ng-hide="$ctrl.isNew">Update task</button>
             </div>

@@ -1,6 +1,6 @@
-angular.module('sprintModule').component('addSprint', {
+angular.module('lynxModule').component('addSprint', {
     templateUrl: '/application/sprint/components/addSprint.html',
-    controller: function AddSprintController($scope, $http, $q, $location) {
+    controller: function AddSprintController($scope, $http, $q, $location, $window) {
         var self = this;
 
         self.formData = {
@@ -20,9 +20,13 @@ angular.module('sprintModule').component('addSprint', {
         });
 
         self.submitForm = function() {
-            $http.post('/sprint/save', JSON.stringify(self.formData)).then(function(){
-                $location.path('/list');
-            });
+            if (!self.formData.project) {
+                $window.alertify.error('Select project first');
+            } else {
+                $http.post('/sprint/save', JSON.stringify(self.formData)).then(function(){
+                    $location.path('/list');
+                });
+            }
         };
     }
 });

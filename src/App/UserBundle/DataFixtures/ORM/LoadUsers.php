@@ -22,7 +22,7 @@ class LoadUsers implements FixtureInterface, ContainerAwareInterface {
         $encoder = $this->container->get('security.password_encoder');
         $encoded = $encoder->encodePassword($user, $password);
         $user->setUsername('admin');
-        $user->setName('John');
+        $user->setName('Admin');
         $user->setLastname('Admin');
         $user->setPassword($encoded);
         $user->setEmail('admin@example.com');

@@ -1,4 +1,4 @@
-angular.module('projectModule').component('addProject', {
+angular.module('lynxModule').component('addProject', {
     templateUrl: '/application/project/components/addProject.html',
     controller: function AddProjectController($scope, $http, $location) {
         var self = this;
@@ -10,7 +10,7 @@ angular.module('projectModule').component('addProject', {
 
         self.submitForm = function() {
             $http.post('/project/save', JSON.stringify(self.formData)).then(function(){
-                $location.path('/list');
+                $location.path('/project');
             });
         };
     }

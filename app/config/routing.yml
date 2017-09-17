@@ -1,3 +1,8 @@
+lynx_app:
+    resource: "@LynxAppBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 priority:
     resource: "@LynxPriorityBundle/Controller/"
     type:     annotation
@@ -58,7 +63,7 @@ fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 
 fos_user_security_login:
-    path:      /
+    path:      /login
     defaults:  { _controller: FOSUserBundle:Security:login, _method: POST }
 
 fos_user_profile:

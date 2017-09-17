@@ -1,0 +1,1 @@
+var lynxModule = angular.module('lynxModule', ['ngRoute', 'as.sortable']);

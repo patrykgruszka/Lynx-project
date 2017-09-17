@@ -25,6 +25,7 @@ class AppKernel extends Kernel
             new App\ManagerBundle\AppManagerBundle(),
             new App\UserBundle\AppUserBundle(),
             new Lynx\UserpanelBundle\LynxUserpanelBundle(),
+            new Lynx\AppBundle\LynxAppBundle(),
             new Lynx\TaskboardBundle\LynxTaskboardBundle(),
             new Lynx\ProjectBundle\LynxProjectBundle(),
             new Lynx\TaskBundle\LynxTaskBundle(),

@@ -11,7 +11,7 @@ class SecurityController extends BaseSecurityController {
     public function loginAction() {
 
         if (true === $this->container->get('security.context')->isGranted('IS_AUTHENTICATED_FULLY')) {
-            return new RedirectResponse($this->container->get('router')->generate('lynx_taskboard_default_index'));
+            return new RedirectResponse($this->container->get('router')->generate('lynx_app_default_index'));
         }
 
         $template = sprintf('FOSUserBundle:Security:login.html.%s', $this->container->getParameter('fos_user.template.engine'));

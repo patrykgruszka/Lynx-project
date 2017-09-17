@@ -1,4 +1,4 @@
-angular.module('taskboardModule').component('kanbanGroup', {
+angular.module('lynxModule').component('kanbanGroup', {
     templateUrl: '/application/taskboard/components/kanbanGroup.html',
     controller: function KanbanGroupController($http, $window) {
         this.$onInit = function () {

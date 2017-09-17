@@ -1,4 +1,4 @@
-angular.module('sprintModule').component('sprintList', {
+angular.module('lynxModule').component('sprintList', {
     templateUrl: '/application/sprint/components/sprintList.html',
     controller: function SprintListController($http) {
         var self = this;

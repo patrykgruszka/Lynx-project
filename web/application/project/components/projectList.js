@@ -1,4 +1,4 @@
-angular.module('projectModule').component('projectList', {
+angular.module('lynxModule').component('projectList', {
     templateUrl: '/application/project/components/projectList.html',
     controller: function ProjectListController($http) {
         var self = this;

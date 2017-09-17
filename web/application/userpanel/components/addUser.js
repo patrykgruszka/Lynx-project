@@ -1,6 +1,6 @@
-angular.module('userpanelModule').component('addUser', {
+angular.module('lynxModule').component('addUser', {
     templateUrl: '/application/userpanel/components/addUser.html',
-    controller: function UserListController($http, $window) {
+    controller: function UserListController($http, $window, $location) {
         var self = this;
         self.loading = false;
 
@@ -20,13 +20,11 @@ angular.module('userpanelModule').component('addUser', {
             if (self.user.password === self.user.passwordRepeat) {
                 $http.post('/userpanel/addUser', JSON.stringify(self.user)).then(function(response){
                     $window.alertify.success(response.data.msg);
-                    $location.path('/team');
+                    $location.path('/userpanel/team');
                 });
             } else {
                 $window.alertify.error('Password does not match confirmation');
             }
         };
-
-        $window.sidebar.activate('userpanel--add-user');
     }
 });

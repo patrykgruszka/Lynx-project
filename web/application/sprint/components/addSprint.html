@@ -13,13 +13,13 @@
         <form ng-submit="$ctrl.submitForm()">
 
             <div class="form-group">
-                <label for="sprint-name-input">Sprint name</label>
-                <input id="sprint-name-input" ng-model="$ctrl.formData.name" type="text" class="form-control"  placeholder="Enter sprint name here">
+                <label for="sprint-name-input">Sprint name*</label>
+                <input id="sprint-name-input" ng-model="$ctrl.formData.name" type="text" class="form-control"  placeholder="Enter sprint name here" required>
             </div>
 
             <div class="form-group">
-                <label for="project-select">Select project from list</label>
-                <select name="project" id="project-select" class="form-control"
+                <label for="project-select">Select project from list*</label>
+                <select name="project" id="project-select" class="form-control" required
                         ng-model="$ctrl.project"
                         ng-options="project.name for project in $ctrl.projectList"
                         ng-change="$ctrl.selectProject()"></select>
@@ -31,7 +31,7 @@
             </div>
 
             <div class="button-wrapper mt-sm">
-                <a href="#!/list" class="btn btn-primary">Back to list</a>
+                <a href="#!/sprint" class="btn btn-primary">Back to list</a>
                 <button type="submit" class="btn btn-success">Create sprint</button>
             </div>
         </form>

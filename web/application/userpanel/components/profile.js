@@ -1,4 +1,4 @@
-angular.module('userpanelModule').component('profile', {
+angular.module('lynxModule').component('profile', {
     templateUrl: '/application/userpanel/components/profile.html',
     controller: function UserListController($http, $window) {
         var self = this;
@@ -14,7 +14,5 @@ angular.module('userpanelModule').component('profile', {
                 $window.alertify.success(response.data.msg);
             });
         };
-
-        $window.sidebar.activate('userpanel--profile');
     }
 });

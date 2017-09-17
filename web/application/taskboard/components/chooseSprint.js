@@ -1,4 +1,4 @@
-angular.module('taskboardModule').component('chooseSprint', {
+angular.module('lynxModule').component('chooseSprint', {
     templateUrl: '/application/taskboard/components/chooseSprint.html',
     controller: function ChooseSprintController($http) {
         var self = this;

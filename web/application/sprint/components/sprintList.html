@@ -25,7 +25,7 @@
                 <td>{{sprint.name}}</td>
                 <td>{{sprint.description}}</td>
                 <td>{{sprint.project.name}}</td>
-                <td><a href="/app_dev.php/taskboard/#!/project/{{sprint.project.id}}/sprint/{{sprint.id}}">Taskboard</a></td>
+                <td><a href="#!/taskboard/project/{{sprint.project.id}}/sprint/{{sprint.id}}">Taskboard</a></td>
             </tr>
             </tbody>
         </table>
@@ -34,6 +34,6 @@
             There are no sprints in database. Start now, and add your first sprint.
         </div>
 
-        <a href="#!/add" class="btn btn-success">Add new sprint</a>
+        <a href="#!/sprint/add" class="btn btn-success">Add new sprint</a>
     </div>
 </div>

@@ -46,12 +46,12 @@ var AddTaskController = function AddTaskController($scope, $http, $q, $location,
     self.submitForm = function() {
         $http.post('/task/save', JSON.stringify(self.formData)).then(function(response){
             $window.alertify.success(response.data.msg);
-            $location.path('/list');
+            $location.path('/task');
         });
     };
 };
 
-angular.module('taskModule').component('addTask', {
+angular.module('lynxModule').component('addTask', {
     templateUrl: '/application/task/components/editTask.html',
     controller: AddTaskController
 });
