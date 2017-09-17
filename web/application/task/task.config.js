@@ -7,6 +7,10 @@ angular.module('taskModule')
                 template: 'Show task'
             }).when('/add', {
                 template: '<app-header title="Task" subtitle="Add"></app-header><add-task></add-task>'
+            }).when('/edit/:taskId', {
+                template: function (params) {
+                    return '<app-header title="Task" subtitle="Edit"></app-header><edit-task task-id="' + params.taskId + '"></edit-task>';
+                }
             }).otherwise('/list');
         }
     ]);

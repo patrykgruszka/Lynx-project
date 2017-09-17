@@ -29,91 +29,186 @@ class Task {
     
     /**
      * @ORM\ManyToOne(targetEntity="Lynx\ProjectBundle\Entity\Project")
-     * @ORM\JoinColumn(name="project_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="project_id", referencedColumnName="id", nullable=false)
      */
     private $project;
 
     /**
      * @ORM\ManyToOne(targetEntity="Lynx\SprintBundle\Entity\Sprint", inversedBy="tasks")
-     * @ORM\JoinColumn(name="sprint_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="sprint_id", referencedColumnName="id", nullable=true)
      */
     private $sprint;
     
     /**
      * @ORM\ManyToOne(targetEntity="Lynx\PriorityBundle\Entity\Priority")
-     * @ORM\JoinColumn(name="priority_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="priority_id", referencedColumnName="id", nullable=false)
      */
     private $priority;
     
     /**
      * @ORM\ManyToOne(targetEntity="Lynx\StatusBundle\Entity\Status")
-     * @ORM\JoinColumn(name="status_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="status_id", referencedColumnName="id", nullable=false)
      */
     private $status;
-    
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\UserBundle\Entity\User")
+     * @ORM\JoinColumn(name="reporter_id", referencedColumnName="id", nullable=false)
+     */
+    private $reporter;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\UserBundle\Entity\User")
+     * @ORM\JoinColumn(name="assignee_id", referencedColumnName="id", nullable=true)
+     */
+    private $assignee;
     
     
     public function __construct() {
         
     }
-    
-    public function getName() {
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
         return $this->name;
     }
 
-    public function getDescription() {
-        return $this->description;
-    }
-
-    public function getId() {
-        return $this->id;
-    }
-
-    public function getSprint() {
-        return $this->sprint;
-    }
-
-    public function setName($name) {
+    /**
+     * @param mixed $name
+     */
+    public function setName($name)
+    {
         $this->name = $name;
     }
 
-    public function setDescription($description) {
+    /**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param mixed $description
+     */
+    public function setDescription($description)
+    {
         $this->description = $description;
     }
 
-    public function setId($id) {
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
         $this->id = $id;
     }
 
-    public function setProject($project) {
-        $this->project = $project;
-    }
-
-    public function setSprint($sprint) {
-        $this->sprint = $sprint;
-    }
-
-    public function getProject() {
+    /**
+     * @return mixed
+     */
+    public function getProject()
+    {
         return $this->project;
     }
 
-    public function getPriority() {
+    /**
+     * @param mixed $project
+     */
+    public function setProject($project)
+    {
+        $this->project = $project;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSprint()
+    {
+        return $this->sprint;
+    }
+
+    /**
+     * @param mixed $sprint
+     */
+    public function setSprint($sprint)
+    {
+        $this->sprint = $sprint;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPriority()
+    {
         return $this->priority;
     }
 
-    public function getStatus() {
-        return $this->status;
-    }
-
-    public function setPriority($priority) {
+    /**
+     * @param mixed $priority
+     */
+    public function setPriority($priority)
+    {
         $this->priority = $priority;
     }
 
-    public function setStatus($status) {
+    /**
+     * @return mixed
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param mixed $status
+     */
+    public function setStatus($status)
+    {
         $this->status = $status;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getReporter()
+    {
+        return $this->reporter;
+    }
 
+    /**
+     * @param mixed $reporter
+     */
+    public function setReporter($reporter)
+    {
+        $this->reporter = $reporter;
+    }
 
-    
+    /**
+     * @return mixed
+     */
+    public function getAssignee()
+    {
+        return $this->assignee;
+    }
+
+    /**
+     * @param mixed $assignee
+     */
+    public function setAssignee($assignee)
+    {
+        $this->assignee = $assignee;
+    }
 }

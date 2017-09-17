@@ -19,7 +19,7 @@ class LoadPriorities implements FixtureInterface, ContainerAwareInterface {
   public function load( ObjectManager $manager ) {
     $priorities = [
         [
-            "name"        => "Minior",
+            "name"        => "Minor",
             "description" => ""
         ],
         [

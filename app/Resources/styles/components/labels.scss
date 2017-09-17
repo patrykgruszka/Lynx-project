@@ -1,0 +1,53 @@
+.role-label {
+  @extend .label;
+  @extend .label-default;
+
+  + .role-label {
+    margin-left: 5px;
+  }
+
+  &[data-role="ROLE_PROJECT_MASTER"] {
+    @extend .label-primary;
+  }
+  &[data-role="ROLE_USER"] {
+    @extend .label-info;
+  }
+}
+
+.priority-label {
+  @extend .label;
+  @extend .label-default;
+
+  + .priority-label {
+    margin-left: 5px;
+  }
+
+  &[data-priority="minor"] {
+    @extend .label-success;
+  }
+  &[data-priority="major"] {
+    @extend .label-warning;
+  }
+  &[data-priority="critical"] {
+    @extend .label-danger;
+  }
+}
+
+.status-label {
+  @extend .label;
+  @extend .label-default;
+
+  + .status-label {
+    margin-left: 5px;
+  }
+
+  &[data-status="todo"] {
+    @extend .label-default;
+  }
+  &[data-status="in-progress"] {
+    @extend .label-warning;
+  }
+  &[data-status="done"] {
+    @extend .label-success;
+  }
+}

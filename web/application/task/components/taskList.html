@@ -14,20 +14,24 @@
             <tr>
                 <th>Id</th>
                 <th>Name</th>
-                <th>Description</th>
                 <th>Status</th>
                 <th>Priority</th>
                 <th>Project</th>
+                <th>Reporter</th>
+                <th>Assignee</th>
+                <th>Actions</th>
             </tr>
             </thead>
             <tbody>
             <tr ng-repeat="task in $ctrl.tasksList">
                 <td>{{task.id}}</td>
                 <td>{{task.name}}</td>
-                <td>{{task.description}}</td>
-                <td>{{task.status.name}}</td>
-                <td>{{task.priority.name}}</td>
+                <td><span class="status-label" data-status="{{task.status.short_name}}">{{task.status.name}}</span></td>
+                <td><span class="priority-label" data-priority="{{task.priority.name|lowercase}}">{{task.priority.name}}</span></td>
                 <td>{{task.project.name}}</td>
+                <td>{{task.reporter.name}} {{task.reporter.lastname}}</td>
+                <td><span ng-show="task.assignee">{{task.assignee.name}} {{task.assignee.lastname}}</span><span ng-hide="task.assignee">Unassigned</span></td>
+                <td><a href="#!/edit/{{task.id}}">Edit</a> <a href="" ng-click="$ctrl.removeTask(task)">Delete</a></td>
             </tr>
             </tbody>
         </table>
