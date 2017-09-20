@@ -2,59 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fba5c51-2ea7-4134-9113-12d29834a421" name="Default" comment="Taskboard per sprint">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lynx/AppBundle/Controller/DefaultController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lynx/AppBundle/LynxAppBundle.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lynx/AppBundle/Resources/config/services.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lynx/AppBundle/Resources/views/Default/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/application/layout/components/appSidebar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/application/layout/components/appSidebar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/application/lynx.module.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/application/layout/services/sidebar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/application/project/project.config.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/application/project/project.module.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/application/sprint/sprint.config.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/application/sprint/sprint.module.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/application/task/task.config.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/application/task/task.module.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/application/taskboard/taskboard.config.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/application/taskboard/taskboard.module.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/application/userpanel/userpanel.config.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/application/userpanel/userpanel.module.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/sections/sidebar.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/sections/sidebar.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App/UserBundle/Controller/SecurityController.php" afterPath="$PROJECT_DIR$/src/App/UserBundle/Controller/SecurityController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App/UserBundle/DataFixtures/ORM/LoadUsers.php" afterPath="$PROJECT_DIR$/src/App/UserBundle/DataFixtures/ORM/LoadUsers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lynx/TaskboardBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/Lynx/TaskboardBundle/Controller/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/application/layout/components/appHeader.js" afterPath="$PROJECT_DIR$/web/application/layout/components/appHeader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/application/project/components/addProject.html" afterPath="$PROJECT_DIR$/web/application/project/components/addProject.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/application/project/components/addProject.js" afterPath="$PROJECT_DIR$/web/application/project/components/addProject.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/application/project/components/projectList.html" afterPath="$PROJECT_DIR$/web/application/project/components/projectList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/application/project/components/projectList.js" afterPath="$PROJECT_DIR$/web/application/project/components/projectList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/application/sprint/components/addSprint.html" afterPath="$PROJECT_DIR$/web/application/sprint/components/addSprint.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/application/sprint/components/addSprint.js" afterPath="$PROJECT_DIR$/web/application/sprint/components/addSprint.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/application/sprint/components/sprintList.html" afterPath="$PROJECT_DIR$/web/application/sprint/components/sprintList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/application/sprint/components/sprintList.js" afterPath="$PROJECT_DIR$/web/application/sprint/components/sprintList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/application/task/components/addTask.js" afterPath="$PROJECT_DIR$/web/application/task/components/addTask.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/application/task/components/editTask.html" afterPath="$PROJECT_DIR$/web/application/task/components/editTask.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/application/task/components/editTask.js" afterPath="$PROJECT_DIR$/web/application/task/components/editTask.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/application/task/components/taskList.html" afterPath="$PROJECT_DIR$/web/application/task/components/taskList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/application/task/components/taskList.js" afterPath="$PROJECT_DIR$/web/application/task/components/taskList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/application/taskboard/components/chooseSprint.html" afterPath="$PROJECT_DIR$/web/application/taskboard/components/chooseSprint.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/application/taskboard/components/chooseSprint.js" afterPath="$PROJECT_DIR$/web/application/taskboard/components/chooseSprint.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/application/taskboard/components/kanbanGroup.js" afterPath="$PROJECT_DIR$/web/application/taskboard/components/kanbanGroup.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/application/taskboard/components/taskboard.html" afterPath="$PROJECT_DIR$/web/application/taskboard/components/taskboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/application/taskboard/components/taskboard.js" afterPath="$PROJECT_DIR$/web/application/taskboard/components/taskboard.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/application/userpanel/components/addUser.js" afterPath="$PROJECT_DIR$/web/application/userpanel/components/addUser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/application/userpanel/components/profile.js" afterPath="$PROJECT_DIR$/web/application/userpanel/components/profile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/application/userpanel/components/userList.html" afterPath="$PROJECT_DIR$/web/application/userpanel/components/userList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/application/userpanel/components/userList.js" afterPath="$PROJECT_DIR$/web/application/userpanel/components/userList.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/application/app.js" afterPath="$PROJECT_DIR$/web/application/lynx.config.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,71 +22,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="appSidebar.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/application/layout/components/appSidebar.html">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="1870">
+                <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="41" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LynxProjectBundle.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Lynx/ProjectBundle/LynxProjectBundle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="120" lean-forward="false" selection-start-line="8" selection-start-column="120" selection-end-line="8" selection-end-column="120" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addSprint.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/application/sprint/components/addSprint.html">
+      <file leaf-file-name="Task.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Lynx/TaskBundle/Entity/Task.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+            <state relative-caret-position="17">
+              <caret line="48" column="54" lean-forward="false" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addSprint.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/application/sprint/components/addSprint.js">
+      <file leaf-file-name="addTask.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/application/task/components/addTask.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+            <state relative-caret-position="-357">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addUser.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/application/userpanel/components/addUser.js">
+      <file leaf-file-name="kanbanGroup.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/application/taskboard/components/kanbanGroup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="10" lean-forward="false" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/application/userpanel/components/profile.js">
+      <file leaf-file-name="taskboard.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/application/taskboard/components/taskboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userList.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/application/userpanel/components/userList.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoadUsers.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/App/UserBundle/DataFixtures/ORM/LoadUsers.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="27" column="29" lean-forward="false" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+            <state relative-caret-position="306">
+              <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -154,21 +95,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="appSidebar.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/application/layout/components/appSidebar.js">
+      <file leaf-file-name="LoadExampleProjects.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Lynx/ProjectBundle/DataFixtures/ORM/LoadExampleProjects.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="24" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="24" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sidebar.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/sections/sidebar.html.twig">
+      <file leaf-file-name="LynxSprintBundle.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Lynx/SprintBundle/LynxSprintBundle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="54" lean-forward="false" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Sprint.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Lynx/SprintBundle/Entity/Sprint.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -290,6 +241,7 @@
       <core-task name="watch" info="Run predefined tasks whenever watched files change." file-path="$PROJECT_DIR$/node_modules/grunt-contrib-watch/tasks/watch.js" multi="false">
         <target value="styles" />
         <target value="scripts" />
+        <target value="templates" />
       </core-task>
       <core-task name="clean" info="Clean files and folders." file-path="$PROJECT_DIR$/node_modules/grunt-contrib-clean/tasks/clean.js" multi="true">
         <target value="cache" />
@@ -367,36 +319,6 @@
               <item name="lynx" type="b2602c69:ProjectViewProjectNode" />
               <item name="lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="App" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="lynx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="App" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="lynx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="App" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="DataFixtures" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="lynx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="App" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="DataFixtures" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ORM" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="lynx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -415,7 +337,156 @@
             <path>
               <item name="lynx" type="b2602c69:ProjectViewProjectNode" />
               <item name="lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ProjectBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="lynx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ProjectBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="lynx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ProjectBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="DataFixtures" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="lynx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ProjectBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="DataFixtures" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ORM" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="lynx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ProjectBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="lynx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SprintBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="lynx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SprintBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="lynx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SprintBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="lynx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SprintBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="lynx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="TaskBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="lynx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="TaskBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="lynx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="UserpanelBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="lynx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="tests" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="lynx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="lynx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="lynx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="project" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="lynx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="lynx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="task" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="lynx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="task" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="lynx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="taskboard" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="lynx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lynx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="taskboard" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -437,19 +508,19 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Development\polsl\lynx\web\application\layout\services" />
-      <recent name="D:\Development\polsl\lynx\web\application\layout\components" />
-      <recent name="D:\Development\polsl\lynx\web\application\layout" />
-      <recent name="C:\development\polsl\lynx\web\application\taskboard\components" />
-      <recent name="C:\development\polsl\lynx\web\app\project" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Development\polsl\lynx\web\application\layout\components" />
       <recent name="D:\Development\polsl\lynx\src\Lynx" />
       <recent name="D:\Development\polsl\lynx\web\application\taskboard\components" />
       <recent name="D:\Development\polsl\lynx\web\application\userpanel\components" />
       <recent name="D:\Development\polsl\lynx\app\Resources\styles\components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Development\polsl\lynx\web\application\layout\services" />
+      <recent name="D:\Development\polsl\lynx\web\application\layout\components" />
+      <recent name="D:\Development\polsl\lynx\web\application\layout" />
+      <recent name="C:\development\polsl\lynx\web\application\taskboard\components" />
+      <recent name="C:\development\polsl\lynx\web\app\project" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -644,6 +715,8 @@
       <workItem from="1500675329243" duration="3659000" />
       <workItem from="1500711181939" duration="1840000" />
       <workItem from="1505558643507" duration="64130000" />
+      <workItem from="1505903259266" duration="32000" />
+      <workItem from="1505928616606" duration="1511000" />
     </task>
     <task id="LOCAL-00001" summary="Gruntfile, package, frontend assets">
       <created>1490655607650</created>
@@ -880,26 +953,26 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199769000" />
+    <option name="totallyTimeSpent" value="201567000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21847826" sideWeight="0.5021322" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21847826" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12242687" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18496802" sideWeight="0.52155775" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18496802" sideWeight="0.47844228" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13006397" sideWeight="0.62826085" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13006397" sideWeight="0.37173912" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21847826" sideWeight="0.5021322" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21847826" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12242687" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -949,92 +1022,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Lynx/AppBundle/LynxAppBundle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lynx/TaskboardBundle/LynxTaskboardBundle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-          <folding>
-            <element signature="e#7#47#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="4" column="66" lean-forward="false" selection-start-line="4" selection-start-column="66" selection-end-line="4" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="66" column="57" lean-forward="false" selection-start-line="66" selection-start-column="57" selection-end-line="66" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/UserBundle/Controller/SecurityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="53" column="23" lean-forward="false" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/application/project/project.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="44" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/application/project/project.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="9" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/web/application/project/project.config.js" />
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="26" column="53" lean-forward="true" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
+        <state relative-caret-position="408">
+          <caret line="24" column="21" lean-forward="false" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -1043,31 +1035,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="72" lean-forward="false" selection-start-line="9" selection-start-column="72" selection-end-line="9" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/application/sprint/sprint.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/application/task/task.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/web/application/sprint/sprint.module.js" />
+    <entry file="file://$PROJECT_DIR$/web/application/task/task.module.js" />
     <entry file="file://$PROJECT_DIR$/web/application/task/components/taskList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="3" lean-forward="true" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1075,7 +1051,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1083,55 +1058,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/application/taskboard/taskboard.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="56" lean-forward="true" selection-start-line="0" selection-start-column="56" selection-end-line="0" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/web/application/taskboard/taskboard.module.js" />
     <entry file="file://$PROJECT_DIR$/web/application/lynx.module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="47" lean-forward="true" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/application/sprint/sprint.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="14" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="9" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/application/task/task.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="13" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/application/taskboard/taskboard.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="14" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="9" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/web/application/sprint/sprint.config.js" />
+    <entry file="file://$PROJECT_DIR$/web/application/task/task.config.js" />
+    <entry file="file://$PROJECT_DIR$/web/application/taskboard/taskboard.config.js" />
     <entry file="file://$PROJECT_DIR$/web/application/project/components/addProject.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1139,7 +1083,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" column="28" lean-forward="false" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1147,7 +1090,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="535">
           <caret line="36" column="27" lean-forward="false" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1155,7 +1097,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="39" column="78" lean-forward="false" selection-start-line="39" selection-start-column="78" selection-end-line="39" selection-end-column="78" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1163,6 +1104,208 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="45" column="26" lean-forward="false" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/application/userpanel/components/userList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="38" lean-forward="false" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/application/userpanel/userpanel.module.js" />
+    <entry file="file://$PROJECT_DIR$/web/application/userpanel/userpanel.config.js" />
+    <entry file="file://$PROJECT_DIR$/web/application/lynx.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="23" lean-forward="false" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/logs/prod.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3468">
+          <caret line="204" column="21" lean-forward="false" selection-start-line="204" selection-start-column="21" selection-end-line="204" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/application/sprint/components/sprintList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/application/project/components/addProject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/application/project/components/projectList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/application/task/components/editTask.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="63" column="6" lean-forward="true" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/application/taskboard/components/chooseSprint.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/sections/sidebar.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="54" lean-forward="false" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/application/layout/components/appSidebar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="24" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/application/layout/components/appSidebar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="120" lean-forward="false" selection-start-line="8" selection-start-column="120" selection-end-line="8" selection-end-column="120" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/application/sprint/components/addSprint.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/application/sprint/components/addSprint.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/application/userpanel/components/addUser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="10" lean-forward="false" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/application/userpanel/components/profile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/application/userpanel/components/userList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/UserBundle/DataFixtures/ORM/LoadUsers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="27" column="29" lean-forward="false" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/vendor/ng-alertify.js" />
+    <entry file="file://$PROJECT_DIR$/app/Resources/scripts/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lynx/ProjectBundle/Entity/Project.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1326">
+          <caret line="80" column="7" lean-forward="false" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lynx/ProjectBundle/LynxProjectBundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lynx/ProjectBundle/DataFixtures/ORM/LoadExampleProjects.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lynx/SprintBundle/LynxSprintBundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lynx/SprintBundle/Entity/Sprint.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lynx/TaskBundle/Entity/Task.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="48" column="54" lean-forward="false" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/application/task/components/editTask.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="67" column="18" lean-forward="false" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/application/task/components/addTask.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1183,179 +1326,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/application/userpanel/components/userList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="38" lean-forward="false" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/application/userpanel/userpanel.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/application/userpanel/userpanel.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="14" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="9" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/application/lynx.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="23" lean-forward="false" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/logs/prod.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/application/sprint/components/sprintList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/application/project/components/addProject.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/application/project/components/projectList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/application/task/components/addTask.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="36" column="85" lean-forward="false" selection-start-line="36" selection-start-column="85" selection-end-line="36" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/application/task/components/editTask.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="63" column="6" lean-forward="true" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/application/taskboard/components/chooseSprint.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/sections/sidebar.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="54" lean-forward="false" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/application/layout/components/appSidebar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="24" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/application/layout/components/appSidebar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="120" lean-forward="false" selection-start-line="8" selection-start-column="120" selection-end-line="8" selection-end-column="120" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/application/task/components/editTask.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="67" column="18" lean-forward="false" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/application/sprint/components/addSprint.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/application/sprint/components/addSprint.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/application/userpanel/components/addUser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="10" lean-forward="false" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/application/userpanel/components/profile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/application/userpanel/components/userList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/UserBundle/DataFixtures/ORM/LoadUsers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="27" column="29" lean-forward="false" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1870">
+            <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="41" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

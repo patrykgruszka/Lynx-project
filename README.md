@@ -1,7 +1,7 @@
 # Lynx #
 
 ## Wymagania ##
-1. Serwer WWW z PHP w wersji 5.6 i bazą danych MySQL
+1. Serwer WWW z PHP w wersji 7.1 i bazą danych MySQL
 2. Composer - Menadżer zależności dla PHP.
 3. Node.js - Środowisko programistyczne dla skalowalnych aplikacji internetowych.
 4. Grunt - JavaScript'owy system automatyzacji pracy.
@@ -9,8 +9,8 @@
 ## Instalacja wymagań ##
 
 ### Serwer WWW ###
-Można korzystać z dowolnego serwera WWW, który posiada PHP w wersji 5.6 i serwer baz danych MySQL. 
-W przykładach będziemy korzystali z serwera [XAMPP](https://www.apachefriends.org/pl/index.html) - należy pobrać wersję z PHP 5.6 i zainstalować w systemie.
+Można korzystać z dowolnego serwera WWW, który posiada PHP w wersji 7.1 i serwer baz danych MySQL. 
+W przykładach będziemy korzystali z serwera [XAMPP](https://www.apachefriends.org/pl/index.html) - należy pobrać wersję z PHP 7.1 i zainstalować w systemie.
 
 ### Composer ###
 #### Instalacja globalna w systemie ####
